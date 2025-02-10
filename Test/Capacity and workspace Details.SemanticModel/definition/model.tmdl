@@ -1,0 +1,31 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["DirectQuery to AS - Premium Chargeback Reporting","DirectQuery to AS - PBI-monitoir-adx-Version1.0"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.129.1229.0 (24.05)
+
+ref table Capacities
+ref table LocalDateTable_240f316d-28c9-4550-b471-3446746eb780
+ref table Artifacts
+ref table Chargeback
+ref table Workspaces
+ref table 'All Measures'
+ref table 'Top N Selector'
+ref table Dates
+ref table 'Days Ago to Start'
+ref table LocalDateTable_ec619fa8-dc52-485f-bf44-ab2c167d991c
+ref table LocalDateTable_d8ea4541-e16b-41d9-9cdd-2a447aa88623
+ref table LocalDateTable_f52785b6-0652-42dd-ae05-e85152babea4
+ref table LocalDateTable_8f15f37e-64a7-4e3d-a71a-2768a1983e04
+ref table 'Catalog - Permission'
+
+ref cultureInfo en-US
+

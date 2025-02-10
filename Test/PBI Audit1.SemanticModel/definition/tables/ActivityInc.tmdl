@@ -1,0 +1,197 @@
+table ActivityInc
+	lineageTag: 79033182-48b7-48b5-ae47-e457f242236e
+
+	column Activity
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 1df54905-4b80-4459-abf5-7436612f1f95
+		summarizeBy: none
+		sourceColumn: Activity
+
+		annotation SummarizationSetBy = Automatic
+
+	column AppName
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 54b570c3-f5ad-41a3-a7b3-b5b4bbf4049b
+		summarizeBy: none
+		sourceColumn: AppName
+
+		annotation SummarizationSetBy = Automatic
+
+	column AppReportId
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 8e968ad1-1134-48f7-9253-b8ec01273f04
+		summarizeBy: none
+		sourceColumn: AppReportId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CapacityName
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 0049115f-119e-4c71-97a8-4bdc845c0950
+		summarizeBy: none
+		sourceColumn: CapacityName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ConsumptionMethod
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: da576763-2040-4145-84a5-a9c10e9d9d2d
+		summarizeBy: none
+		sourceColumn: ConsumptionMethod
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreationTime
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: bb211503-12ef-4de7-8d8a-3f48dee3a4d1
+		summarizeBy: none
+		sourceColumn: CreationTime
+
+		annotation SummarizationSetBy = Automatic
+
+	column DashboardName
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 975c3d84-1191-4a6f-8d5d-3b5fea9a364f
+		summarizeBy: none
+		sourceColumn: DashboardName
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataConnectivityMode
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: d5b738e3-96bb-40b7-8fbd-193d1a65fc74
+		summarizeBy: none
+		sourceColumn: DataConnectivityMode
+
+		annotation SummarizationSetBy = Automatic
+
+	column DistributionMethod
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 02a7da6f-cb23-4125-bc0d-e99229ca4707
+		summarizeBy: none
+		sourceColumn: DistributionMethod
+
+		annotation SummarizationSetBy = Automatic
+
+	column ItemName
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: f40dfe10-913f-482a-8111-d226c1864a83
+		summarizeBy: none
+		sourceColumn: ItemName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Operation
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 54404c82-db87-42c7-9e6c-7c969fb92ca0
+		summarizeBy: none
+		sourceColumn: Operation
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReportName
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: a8e05ad9-7799-4d66-ac96-59ad2766c938
+		summarizeBy: none
+		sourceColumn: ReportName
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserAgent
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 3cb484a5-8b15-4da9-a9a5-9538ed4463e6
+		summarizeBy: none
+		sourceColumn: UserAgent
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 314d6169-d9f8-4943-a35f-1d63fbd8cde3
+		summarizeBy: count
+		sourceColumn: UserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserType
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d18757ff-6f00-45c0-a1f3-518dfe6d6f56
+		summarizeBy: sum
+		sourceColumn: UserType
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkSpaceName
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 650845af-a1cb-4bdc-adb4-d85a21acbecf
+		summarizeBy: none
+		sourceColumn: WorkSpaceName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Workload
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 720f70cd-b3a7-4d95-83e7-2953a59c6a4b
+		summarizeBy: none
+		sourceColumn: Workload
+
+		annotation SummarizationSetBy = Automatic
+
+	column usageLocation
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: cebb0c4a-d526-4260-ac05-1bf43a20e7f8
+		summarizeBy: none
+		sourceColumn: usageLocation
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 055f4ec0-4f5d-4c05-83e9-a609f85c272f
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsDeveloper
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: f97cf123-09db-49c1-9912-537db24abbce
+		summarizeBy: none
+		sourceColumn: IsDeveloper
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ActivityInc = m
+		mode: directQuery
+		source =
+				let
+				    Source = AzureDataExplorer.Contents("powerbimonitoradx.northeurope", "Pbimonitor", null, [MaxRows=null, MaxSize=null, NoTruncate=null, AdditionalSetStatements=null]),
+				    ActivityInc1 = Source{[Name="ActivityInc"]}[Data]
+				in
+				    ActivityInc1
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,88 @@
+table Capacities
+	lineageTag: 8f5f4500-ea94-4dc7-812b-5384e14410ad
+	sourceLineageTag: 39bc152e-3f78-4534-a7de-1006d9e538da
+
+	column 'Capacity Id'
+		dataType: string
+		isNullable: false
+		lineageTag: e94bb323-3bde-4fbb-9d05-5e17596edc32
+		sourceLineageTag: 6b522251-f873-4281-8c32-878bc617c79c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Capacity Id
+
+		annotation SummarizationSetBy = User
+
+	column 'Core Count'
+		dataType: int64
+		formatString: 0
+		lineageTag: ae0a0a3e-ec76-4c9d-897d-d3061efb7d9e
+		sourceLineageTag: e1dc691d-3c84-4983-8882-7a8486429096
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Core Count
+
+		annotation SummarizationSetBy = User
+
+	column Region
+		dataType: string
+		lineageTag: 986496cf-52ec-4430-88ce-117a20eb1bf7
+		sourceLineageTag: 9907d44a-f7bb-4282-ac5d-fbece2a4e649
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = User
+
+	column 'Capacity Name'
+		dataType: string
+		lineageTag: ef46de5a-2c00-4769-9036-acfbdfdf1d1a
+		sourceLineageTag: 0deae052-d0e0-43a0-b6f7-6e8addd15859
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Capacity Name
+
+		annotation SummarizationSetBy = User
+
+	column SKU
+		dataType: string
+		lineageTag: 2a27534c-c727-429e-aece-cac012221d21
+		sourceLineageTag: 0cfb4f56-8a86-4508-b17e-7cc4b026ee50
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SKU
+
+		annotation SummarizationSetBy = User
+
+	column Owners
+		dataType: string
+		lineageTag: 5b82dde3-07ac-44ea-a97f-206b55cd9707
+		sourceLineageTag: 5cb688d3-acf2-4357-917d-4579b5e823a6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Owners
+
+		annotation SummarizationSetBy = User
+
+	column 'Creation Date'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 7ab46192-2bd4-4499-857e-9481ea8a5671
+		sourceLineageTag: 7046023c-3d6a-4e26-ba48-759d58552976
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Creation Date
+
+		variation Variation
+			isDefault
+			relationship: 8ddd8e07-c0ba-4644-be28-4eef9e39d423
+			defaultHierarchy: LocalDateTable_240f316d-28c9-4550-b471-3446746eb780.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	partition Capacities = entity
+		mode: directQuery
+		source
+			entityName: Capacities
+			expressionSource: 'DirectQuery to AS - Premium Chargeback Reporting'
+

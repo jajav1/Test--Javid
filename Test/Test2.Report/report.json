@@ -1,0 +1,84 @@
+{
+  "config": "{\"version\":\"5.49\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU11\",\"version\":\"5.49\",\"type\":2}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"hideVisualContainerHeader\":false,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1,\"defaultFilterActionIsDataFilter\":true,\"allowChangeFilterTypes\":true,\"useEnhancedTooltips\":true,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU11",
+            "path": "BaseThemes/CY23SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "PBI",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1bfc888ecfbbe3f488b7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.448891554591802,\"y\":0,\"z\":0,\"width\":589.6108330065284,\"height\":451.65701630948814,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Graph.country\",\"active\":true},{\"queryRef\":\"New PA data.company\"}],\"Values\":[{\"queryRef\":\"Count(Graph.displayName)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"Graph\",\"Type\":0},{\"Name\":\"n\",\"Entity\":\"New PA data\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"country\"},\"Name\":\"Graph.country\",\"NativeReferenceName\":\"country\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"displayName\"}},\"Function\":2},\"Name\":\"Count(Graph.displayName)\",\"NativeReferenceName\":\"Count of displayName1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"n\"}},\"Property\":\"company\"},\"Name\":\"New PA data.company\",\"NativeReferenceName\":\"company\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"displayName\"}},\"Function\":2}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 451.66,
+          "width": 589.61,
+          "x": 9.45,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionb23d3bdf9c7a40a61f3a",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"64daebb6194fd623c0cf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":52.913792705714094,\"y\":66.14224088214262,\"z\":0,\"width\":587.7210546956101,\"height\":298.58497312510093}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 298.58,
+          "width": 587.72,
+          "x": 52.91,
+          "y": 66.14,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "PA",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionb8e66f669a8fde3c4f61",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"5e9d1e4d09ca6f7a0aa4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.448891554591802,\"y\":0,\"z\":0,\"width\":568.8232715864265,\"height\":515.9094788807124,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"New PA data.c\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(New PA data.Name)\"},{\"queryRef\":\"CountNonNull(Graph.id)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"n\",\"Entity\":\"New PA data\",\"Type\":0},{\"Name\":\"g\",\"Entity\":\"Graph\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"n\"}},\"Property\":\"c\"},\"Name\":\"New PA data.c\",\"NativeReferenceName\":\"c\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"n\"}},\"Property\":\"Name\"}},\"Function\":2},\"Name\":\"CountNonNull(New PA data.Name)\",\"NativeReferenceName\":\"Count of Name1\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"id\"}},\"Function\":5},\"Name\":\"CountNonNull(Graph.id)\",\"NativeReferenceName\":\"Count of id\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"n\"}},\"Property\":\"Name\"}},\"Function\":2}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 515.91,
+          "width": 568.82,
+          "x": 9.45,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Capacity and workspace Details"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "61a2e7a7-087e-9c4d-4031-e085454c9cb7"
+  }
+}

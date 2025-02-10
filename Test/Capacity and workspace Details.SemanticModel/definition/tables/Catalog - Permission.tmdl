@@ -1,0 +1,114 @@
+table 'Catalog - Permission'
+	lineageTag: 1f1d00c8-b198-40ef-b114-7d26f97c8340
+	sourceLineageTag: b626bf3b-61a3-453e-a034-7d42a3e7e64d
+
+	measure '# Identities' = EXTERNALMEASURE("# Identities", INTEGER, "DirectQuery to AS - PBI-monitoir-adx-Version1.0")
+		formatString: 0
+		lineageTag: 7ea37b0c-326f-4146-94bc-3a9ccb62da88
+		sourceLineageTag: 1c36410f-f7ed-46bc-a4b3-56257ce5eb63
+		dataCategory: Uncategorized
+
+	measure '# Permissions' = EXTERNALMEASURE("# Permissions", INTEGER, "DirectQuery to AS - PBI-monitoir-adx-Version1.0")
+		formatString: 0
+		lineageTag: 182acb5f-fd5b-4f4d-af0b-143cda559f48
+		sourceLineageTag: 243b05fb-fe52-4dc3-886b-95fa3ee75d4e
+		dataCategory: Uncategorized
+
+	column WorkspaceId
+		dataType: string
+		lineageTag: f7f5478a-9547-4b0a-9d39-c2a34dfa4859
+		sourceLineageTag: ec28b720-2b1d-4cc2-aad0-24ddea59a0cb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WorkspaceId
+
+		annotation SummarizationSetBy = User
+
+	column Identity
+		dataType: string
+		lineageTag: 2f155bc7-7615-48ea-a3d3-1c161dbb14cb
+		sourceLineageTag: e4cb3612-be70-451a-8bff-87f02a814c4b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Identity
+
+		annotation SummarizationSetBy = User
+
+	column IdentityId
+		dataType: string
+		lineageTag: f539803e-a1d1-4ffa-ac6e-6b2eff5f10dc
+		sourceLineageTag: 78547bd6-bf00-4f36-934f-b3d88de8c56e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: IdentityId
+
+		annotation SummarizationSetBy = User
+
+	column IdentityGraphId
+		dataType: string
+		lineageTag: 22483c58-6291-4f8c-845d-9536a86cb32b
+		sourceLineageTag: 8b6bef60-49eb-4074-8d09-199297efca22
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: IdentityGraphId
+
+		annotation SummarizationSetBy = User
+
+	column ObjectId
+		dataType: string
+		lineageTag: b9b7c590-17fc-457a-ba33-79416f2e7283
+		sourceLineageTag: 0daaf6b6-b7a4-4e50-b1de-e59074c6c5eb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ObjectId
+
+		annotation SummarizationSetBy = User
+
+	column Object
+		dataType: string
+		lineageTag: 57ff6a4f-e44e-4e58-a1f8-7b293aca6f64
+		sourceLineageTag: 371243ec-cbb3-4222-b231-cf175e951482
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Object
+
+		annotation SummarizationSetBy = User
+
+	column AccessRight
+		dataType: string
+		lineageTag: f4c85b9d-9153-4c2f-b806-2613d2c16814
+		sourceLineageTag: f1eeee54-4f4a-4183-a38d-8d01945cf2c0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AccessRight
+
+		annotation SummarizationSetBy = User
+
+	column IdentityType
+		dataType: string
+		lineageTag: 64c79194-f3f7-45cd-a9ac-543dece1c242
+		sourceLineageTag: c025a95d-2bba-4728-aff1-450aa22e52ed
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: IdentityType
+
+		annotation SummarizationSetBy = User
+
+	column ObjectType
+		dataType: string
+		lineageTag: a9e70db8-bbb3-47f0-ab61-f50e4711e6b4
+		sourceLineageTag: 6f22c7e6-c274-40c3-945b-726d8d2788aa
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ObjectType
+
+		annotation SummarizationSetBy = User
+
+	partition 'Catalog - Permission' = entity
+		mode: directQuery
+		source
+			entityName: Catalog - Permission
+			expressionSource: 'DirectQuery to AS - PBI-monitoir-adx-Version1.0'
+
+	annotation PBI_ResultType = Exception
+

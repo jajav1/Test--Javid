@@ -1,0 +1,39 @@
+relationship 9a419c4a-d1ef-4b85-a444-2234e7b2ab09
+	fromColumn: Activity.UserId
+	toColumn: User.UserId
+
+relationship 2dfe3f40-7c23-4047-8e98-d51fdaf3ed29
+	fromColumn: Activity.Date
+	toColumn: Calender.Date
+
+relationship cfdd79d3-e3a2-4de9-8a33-f4c3ae27bb96
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: Time.TimeId
+	toColumn: Activity.TimeId
+
+relationship 90d0c456-ca26-46eb-a5ac-0645295f50b0
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'User - Licenses'.UserId
+	toColumn: User.UserId
+
+relationship 319dfddc-0b85-412b-8da5-7ca5bf46bede
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'New CA Data'.YEAR_MONTH
+	toColumn: LocalDateTable_c5d1a1bf-bcb2-42ca-b1e1-27e62b22730d.Date
+
+relationship dbbc1a6f-24ba-4849-87f4-952a6144c799
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'New CA Data'.LAST_DATE
+	toColumn: LocalDateTable_0c1dc43c-0c2b-4507-b095-628de859e79d.Date
+
+relationship 1e52072f-ed1e-4c30-9f77-010e9da20a1a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'New PA Data'.YEAR_MONTH
+	toColumn: LocalDateTable_9d065172-f8b2-405f-b19b-1ee6311c3bc8.Date
+
+relationship 2a735f17-6f48-41c7-a036-8de97ea529e6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'New PA Data'.LAST_DATE
+	toColumn: LocalDateTable_e6052674-72f7-44be-9baa-302585dd9f3e.Date
+

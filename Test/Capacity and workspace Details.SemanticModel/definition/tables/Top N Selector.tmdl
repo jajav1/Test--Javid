@@ -1,0 +1,23 @@
+table 'Top N Selector'
+	isHidden
+	lineageTag: da870e38-1d5f-4a9b-a4d3-4ad2a49a2c6b
+	sourceLineageTag: 6da9b881-a8cd-468d-90cf-c3874670f6be
+
+	column 'Top N'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 7fa1e9fb-9110-4c34-8819-dbc04938c357
+		sourceLineageTag: e761f703-4298-4409-b023-f2b7554021f0
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Top N
+
+		annotation SummarizationSetBy = User
+
+	partition 'Top N Selector' = entity
+		mode: directQuery
+		source
+			entityName: Top N Selector
+			expressionSource: 'DirectQuery to AS - Premium Chargeback Reporting'
+

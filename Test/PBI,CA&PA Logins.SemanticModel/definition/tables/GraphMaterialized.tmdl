@@ -1,0 +1,120 @@
+table GraphMaterialized
+	lineageTag: 6d2f8ed5-8a0d-4b2d-a909-75837b6f0d1d
+	sourceLineageTag: fa0ed7ab-c0e3-42ba-9b86-91bb5c47477d
+
+	column assignedLicenses
+		dataType: string
+		lineageTag: 088fa059-b3ec-418e-a14b-ddb4967864b0
+		sourceLineageTag: 3e20e2f1-e67e-4249-bb5b-71dd44d2413b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: assignedLicenses
+
+		annotation SummarizationSetBy = User
+
+	column companyName
+		dataType: string
+		lineageTag: 65c81b2a-e4ee-4bd5-8962-59641279ae72
+		sourceLineageTag: f8431e59-bc75-4156-8107-6dce3b6b477d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: companyName
+
+		annotation SummarizationSetBy = User
+
+	column country
+		dataType: string
+		lineageTag: bad2e275-7307-4def-ac00-f03bf65f5163
+		sourceLineageTag: 7c904530-6cba-40d6-a8ea-94499a5992b2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = User
+
+	column department
+		dataType: string
+		lineageTag: 4f0a9020-1498-413f-bd21-f6ea4e1899c9
+		sourceLineageTag: b0fe8e9f-8ebd-4bd3-9c61-ea01c41667dc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: department
+
+		annotation SummarizationSetBy = User
+
+	column displayName
+		dataType: string
+		lineageTag: ed0d61b5-ce9f-4537-a402-ae11b8fd5646
+		sourceLineageTag: 98a0b911-4a19-405a-a1f9-01a8ec0745f0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: displayName
+
+		annotation SummarizationSetBy = User
+
+	column id
+		dataType: string
+		lineageTag: fc6311da-811c-40b5-bddf-0b69de041b7f
+		sourceLineageTag: 9756e914-b2c6-446b-9c9a-9af4c7395c3f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = User
+
+	column officeLocation
+		dataType: string
+		lineageTag: 3968be77-01fb-43ec-bb8d-7603484e7590
+		sourceLineageTag: 89fd23b9-21a8-48c9-9702-bc5905613190
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: officeLocation
+
+		annotation SummarizationSetBy = User
+
+	column usageLocation
+		dataType: string
+		lineageTag: 82d98324-d000-4c1a-9dc0-142e037e64f0
+		sourceLineageTag: 9e015bf3-c642-47ae-9722-d3b95ad401e3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: usageLocation
+
+		annotation SummarizationSetBy = User
+
+	column userPrincipalName
+		dataType: string
+		lineageTag: b3251516-d1c7-40a0-bb86-6d265bc8e66b
+		sourceLineageTag: 7fd01300-1568-4d51-a5ec-83d1db6a57fc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: userPrincipalName
+
+		annotation SummarizationSetBy = User
+
+	column filename
+		dataType: string
+		lineageTag: 92634707-dfc7-4f9b-be62-522ff1ec2280
+		sourceLineageTag: 3a8bc95a-6d7a-4f54-8348-06455750e2ef
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: filename
+
+		annotation SummarizationSetBy = User
+
+	column ScanDate
+		dataType: string
+		lineageTag: 87bfea54-dd88-4466-8c22-0e30c306cc62
+		sourceLineageTag: 25e9e846-7879-48e3-a298-80256481e537
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ScanDate
+
+		annotation SummarizationSetBy = User
+
+	partition GraphMaterialized = entity
+		mode: directQuery
+		source
+			entityName: GraphMaterialized
+			expressionSource: 'DirectQuery to AS - PBI_Audit 2'
+

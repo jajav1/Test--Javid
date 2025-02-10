@@ -1,0 +1,174 @@
+table tenantsetting
+	lineageTag: 8f60893f-61ae-47fb-8dea-e4dd977ecbc8
+	sourceLineageTag: 52c2204d-5978-4b0c-bdb9-815ccd071bd6
+
+	measure 'Setting name today' = CONCATENATEX(Filter(tenantsetting,tenantsetting[date_column]=TODAY()),tenantsetting[Setting_Name],",")
+		lineageTag: bb2533b5-cfd8-487d-b1a6-756c1427ee1d
+
+		changedProperty = Name
+
+	measure DistinctNewRowsCount = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(tenantSetting[Setting_Name]),
+			    FILTER(
+			        tenantsetting,
+			        [IsNewlyAdded_1] = 1
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 93a5e415-315e-4c97-b4f5-5700932caa3a
+
+	measure IsNewlyAdded_1 = ```
+			
+			IF(
+			    CALCULATE(
+			        MIN(tenantSetting[date_column]),
+			        ALLEXCEPT(tenantsetting, tenantsetting[Setting_Name])
+			    ) >= MIN(tenantSetting[date_column]) &&
+			    CALCULATE(
+			        MIN(tenantSetting[date_column]),
+			        ALLEXCEPT(tenantSetting, tenantSetting[Setting_Name])
+			    ) <= MAX(tenantSetting[date_column]),
+			    1,
+			    0
+			)
+			
+			
+			
+			```
+		formatString: 0
+		lineageTag: add1193f-916f-4dd5-a66e-85a1c8e08c3a
+
+	measure NewRows = ```
+			
+			COALESCE(
+			    CALCULATE(
+			        DISTINCTCOUNT(tenantSetting[Setting_Name]),
+			        FILTER(
+			            tenantSetting,
+			            [IsNewlyAdded_1] = 1
+			        )
+			    ),
+			    0
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 7a0c6877-9da0-4ef3-96a7-d50da20b9260
+
+		changedProperty = Name
+
+	column Setting_Name
+		dataType: string
+		lineageTag: be5364f9-741c-4116-a9ed-17f0d0306708
+		sourceLineageTag: c90d82e5-331c-49a5-8503-c4f5fb6e59ac
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Setting_Name
+
+		annotation SummarizationSetBy = User
+
+	column Title
+		dataType: string
+		lineageTag: 7bb3dc25-c0a0-4da6-9560-8f8294889176
+		sourceLineageTag: 868e1336-cdfa-498d-ad01-3f76756494c5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = User
+
+	column Enabled
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c6b8db54-eda8-478f-89cf-cd000327ac16
+		sourceLineageTag: ab0e1494-d570-4355-811f-bb595f65c81a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Enabled
+
+		annotation SummarizationSetBy = User
+
+	column Can_Specify_Security_Groups
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a11fb457-c19a-407e-b239-6fd1ffa4bd7d
+		sourceLineageTag: 0d6adf42-34fb-4f68-a45a-99fba1f06c38
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Can_Specify_Security_Groups
+
+		annotation SummarizationSetBy = User
+
+	column Tenant_Setting_group
+		dataType: string
+		lineageTag: 5600f4c5-e2c2-4be0-a01d-f893fa1ecd89
+		sourceLineageTag: b518a345-eea2-4f33-8598-29f5adcc83ea
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Tenant_Setting_group
+
+		annotation SummarizationSetBy = User
+
+	column Group_Graphid
+		dataType: string
+		lineageTag: 98db60d2-b5d5-49bc-8794-540b60a57e8f
+		sourceLineageTag: b390ab23-58ea-474d-ab41-23b92f328e84
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Group_Graphid
+
+		annotation SummarizationSetBy = User
+
+	column Group_Name
+		dataType: string
+		lineageTag: 7d0f7059-61e6-417f-a9c5-012b6291caf7
+		sourceLineageTag: 77a44fb8-06ee-4b3a-8e1b-9bc0adea47ef
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Group_Name
+
+		annotation SummarizationSetBy = User
+
+	column date_column
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 18a6af1e-7d55-4c89-8868-19dceb769237
+		sourceLineageTag: 56418b15-950c-4473-abd0-47578eb3ec97
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: date_column
+
+		annotation SummarizationSetBy = User
+
+	column 'Last 15 days' = IF(tenantsetting[date_column] >= TODAY() - 2, tenantsetting[Setting_Name], BLANK())
+		lineageTag: c98dc6bf-c8ea-4844-ae1a-53521e784289
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column DistinctCountLast15Days =
+			
+			CALCULATE(
+			    DISTINCT(tenantsetting[Setting_Name]),
+			    tenantsetting[date_column] >= TODAY() - 1 &&
+			    tenantsetting[date_column] <= TODAY()
+			)
+		lineageTag: cd85286c-2239-44ac-950d-0d38c619d070
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition tenantsetting = entity
+		mode: directQuery
+		source
+			entityName: tenantsetting
+			expressionSource: 'DirectQuery to AS - tenantsetting'
+

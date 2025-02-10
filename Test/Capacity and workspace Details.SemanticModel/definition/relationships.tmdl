@@ -1,0 +1,43 @@
+relationship 8ddd8e07-c0ba-4644-be28-4eef9e39d423
+	fromColumn: Capacities.'Creation Date'
+	toColumn: LocalDateTable_240f316d-28c9-4550-b471-3446746eb780.Date
+
+relationship aa46d143-0e9a-44c8-a071-400029b4d511
+	fromColumn: Chargeback.'Capacity Id'
+	toColumn: Capacities.'Capacity Id'
+
+relationship 5da1d16b-a095-42db-b82d-b9bc36eca9ac
+	fromColumn: Chargeback.'Artifact Id'
+	toColumn: Artifacts.'Artifact Id'
+
+relationship efbd4553-dfb6-491f-90fd-026c624e3f79
+	fromColumn: Chargeback.WorkspaceId
+	toColumn: Workspaces.'Workspace Id'
+
+relationship c77f8795-8778-4da6-a6f5-15dadf3f4b08
+	fromColumn: Chargeback.Date
+	toColumn: Dates.Date
+
+relationship 2f17f2af-5812-4a96-b19c-fc9862ceb999
+	fromColumn: Dates.Date
+	toColumn: LocalDateTable_ec619fa8-dc52-485f-bf44-ab2c167d991c.Date
+
+relationship 2e54a12d-0bfa-4896-bb70-988a5eeae3d5
+	fromColumn: Dates.'First Day of Week'
+	toColumn: LocalDateTable_d8ea4541-e16b-41d9-9cdd-2a447aa88623.Date
+
+relationship 030f7578-2a12-405d-9bf8-a8497f5517e0
+	fromColumn: Dates.'Day Month'
+	toColumn: LocalDateTable_f52785b6-0652-42dd-ae05-e85152babea4.Date
+
+relationship 76c8d68a-7826-47ea-84f4-294649afd5da
+	fromColumn: Dates.'Month Year'
+	toColumn: LocalDateTable_8f15f37e-64a7-4e3d-a71a-2768a1983e04.Date
+
+relationship e367b7d2-12d9-a415-4142-51874ddb2c59
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: none
+	toCardinality: many
+	fromColumn: 'Catalog - Permission'.WorkspaceId
+	toColumn: Workspaces.'Workspace Id'
+

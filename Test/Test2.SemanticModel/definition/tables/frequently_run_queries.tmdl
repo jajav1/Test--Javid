@@ -1,0 +1,131 @@
+table frequently_run_queries
+	lineageTag: e2351aba-8ac5-4c7a-bbcd-2690a76dc8e1
+	sourceLineageTag: f08a93a7-d925-4539-b7c3-853fba379667
+
+	column number_of_runs
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f44efc5-ae0e-4b5f-9c7b-ba146944d03e
+		sourceLineageTag: 62b5b80a-8880-44fb-a904-7d47ea7c4080
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: number_of_runs
+
+		annotation SummarizationSetBy = User
+
+	column min_run_total_elapsed_time_ms
+		dataType: int64
+		formatString: 0
+		lineageTag: 25ffd5c6-80e1-41da-b5b9-0b8a33f7316f
+		sourceLineageTag: 4a626fe5-50fb-4f4f-a337-fadbb061635f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: min_run_total_elapsed_time_ms
+
+		annotation SummarizationSetBy = User
+
+	column max_run_total_elapsed_time_ms
+		dataType: int64
+		formatString: 0
+		lineageTag: 4ed619ce-5b5d-4f73-a5fe-183c973d0fc7
+		sourceLineageTag: 3dc0f95c-657a-436c-9eae-801d2aa36323
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: max_run_total_elapsed_time_ms
+
+		annotation SummarizationSetBy = User
+
+	column avg_total_elapsed_time_ms
+		dataType: int64
+		formatString: 0
+		lineageTag: 83e3a87f-a28e-490d-99b3-f3cdf30d0af2
+		sourceLineageTag: c131a336-44e2-4ea0-9268-6db4b259450a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: avg_total_elapsed_time_ms
+
+		annotation SummarizationSetBy = User
+
+	column number_of_successful_runs
+		dataType: int64
+		formatString: 0
+		lineageTag: 09fb2347-21be-430a-8f76-3a7dae929d5a
+		sourceLineageTag: 0b011b08-b274-49a2-b8e6-740b506281eb
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: number_of_successful_runs
+
+		annotation SummarizationSetBy = User
+
+	column number_of_failed_runs
+		dataType: int64
+		formatString: 0
+		lineageTag: 7f9f300f-51b0-49be-aeea-147ca4d2f552
+		sourceLineageTag: 900e1306-d498-4ef8-af0d-9f824a2a7f45
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: number_of_failed_runs
+
+		annotation SummarizationSetBy = User
+
+	column number_of_canceled_runs
+		dataType: int64
+		formatString: 0
+		lineageTag: 81dab50a-315e-4d1a-b4cf-15722ff7dd17
+		sourceLineageTag: a6cdc09e-b641-4b7d-b777-0ce34e3a78b8
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: number_of_canceled_runs
+
+		annotation SummarizationSetBy = User
+
+	column last_run_total_elapsed_time_ms
+		dataType: int64
+		formatString: 0
+		lineageTag: 3298e626-abc2-45aa-9a97-f1f9405a91a5
+		sourceLineageTag: 615b9909-8b36-4f18-a6e8-f0774cf896d6
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: last_run_total_elapsed_time_ms
+
+		annotation SummarizationSetBy = User
+
+	column last_run_start_time
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 6709fa7a-8f75-4003-82fc-2e9116cef3eb
+		sourceLineageTag: 5c01804e-6bf6-4671-bf97-fc5833c50bf9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: last_run_start_time
+
+		annotation SummarizationSetBy = User
+
+	column last_dist_statement_id
+		dataType: string
+		lineageTag: ee97ee19-f154-4983-9f8e-81cb4efd4536
+		sourceLineageTag: 1dc99b03-b3c2-4f3b-9b40-8a26d654fa1f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: last_dist_statement_id
+
+		annotation SummarizationSetBy = User
+
+	column last_run_command
+		dataType: string
+		lineageTag: ddf380aa-b658-40be-8b05-f38afc1f1218
+		sourceLineageTag: 6d1dde2e-c31d-4e3b-92c5-ced3b616f087
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: last_run_command
+
+		annotation SummarizationSetBy = User
+
+	partition frequently_run_queries = entity
+		mode: directQuery
+		source
+			entityName: frequently_run_queries
+			expressionSource: 'DirectQuery to AS - PBI_Audit'
+
+	annotation PBI_ResultType = Table
+

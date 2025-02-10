@@ -1,0 +1,25 @@
+/// Numerical values ranging from 1 to 30 (default 14).
+table 'Days Ago to Start'
+	isHidden
+	lineageTag: 9400ac86-f2ad-4b71-9f43-6d643ea47dee
+	sourceLineageTag: 0b83dfc3-7b9f-46ce-bc31-ed93a1c4530a
+
+	column 'Days Ago to Start'
+		dataType: double
+		isHidden
+		lineageTag: 89ad8af8-2189-4eac-aec7-8d05d360db2b
+		sourceLineageTag: d53efa10-e4a1-40fc-992f-67390be260e4
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Days Ago to Start
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Days Ago to Start' = entity
+		mode: directQuery
+		source
+			entityName: Days Ago to Start
+			expressionSource: 'DirectQuery to AS - Premium Chargeback Reporting'
+

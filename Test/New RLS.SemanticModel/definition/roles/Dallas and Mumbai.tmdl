@@ -1,0 +1,7 @@
+role 'Dallas and Mumbai'
+	modelPermission: read
+
+	tablePermission Sheet1 = [Location] = "Dallas" || [Location] = "Mumbai"
+
+	annotation PBI_Id = 49b3455fb8e0446d8c168e8f2e774b76
+

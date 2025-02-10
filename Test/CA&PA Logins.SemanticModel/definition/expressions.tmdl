@@ -1,0 +1,131 @@
+expression 'DirectQuery to AS - PBI-monitoir-adx-Version1.0' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/Power%20Bi%20Admin", "PBI-monitoir-adx-Version1.0"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: 047064d2-e34d-4a03-9db9-3924152eeb12
+
+	annotation PBI_IncludeFutureArtifacts = True
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"77777c16-db05-4777-9811-bb7996fd0fba"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"5839a307-c642-4fac-925f-dff4c21a001e"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"21aa97d2-5ab7-406a-95d8-8205037f90b1"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"59a0f753-4f56-4024-9182-b82c4e59e5e9"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"630605e7-f4a2-4dda-ab24-bd73f8d0fda5"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"db9d3426-9214-4ed7-998f-f559c66c8f71"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"55c0f022-0e3e-40f6-a656-7ba86c173de3"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"7ec80820-2820-446e-b5f3-9ce975045d2f"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"9cf4f31c-1c82-4df5-8600-9addb8f65319"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"01427627-4f5d-4640-91e8-d4ca9af032c0"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"b626bf3b-61a3-453e-a034-7d42a3e7e64d"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"4571e3a8-b862-4e43-8040-383755cc5fce"}},"objectType":"Table"}]
+
+expression 'DirectQuery to AS - PBI_Audit' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/Power%20Bi%20Admin", "PBI_Audit"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="0b351414-5094-4fa1-90d5-1afbce3219e4", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: c6e35820-bebd-4e97-827f-8e8faa3a023a
+
+	annotation PBI_IncludeFutureArtifacts = True
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"1349949c-1974-4238-9a22-26a676d2b982"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"5a7aeb1c-d5ae-47d2-ac45-db2c114b2bb8"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"b84f2931-3249-49b7-a548-f3a40b7c3874"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"3f5f8d31-724d-4b41-87aa-de6ab3a67c4c"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"5aa94300-dda0-42e3-ac54-14cf4dd49a90"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"efe8708f-28d1-4bb4-8ab3-92df8073cad9"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"bb82d9f5-f393-483f-9394-38bc55675b00"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"46e4a972-9c25-471e-9e33-456b56118908"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"26e7f64a-a959-443b-84fd-3c5fef369c34"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"e7989634-6cf9-4a62-9c75-0e52bf46573d"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"23c21a09-65a3-4eaf-8384-2fb30e8b2666"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"ab2feee9-ab22-4845-97a8-9367608d329e"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"64bb2fd9-9d40-457a-b732-b089b24a33ce"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"ee3ebc31-8325-4e23-b213-c2aafddb46bb"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"b727c170-5833-4547-a18b-fac139a00224"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"f08a93a7-d925-4539-b7c3-853fba379667"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"f2f8d614-c990-4bab-b3aa-c19963d85468"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"fd153f54-694a-4a9d-9f51-295718827183"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"282c3af4-07d5-47ef-8260-69e87a3be07e"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"ce6f8e2a-2d0c-4524-a694-7f54efe0a681"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"f895c1fd-3a67-43a8-b67c-080827de9ad1"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"db78a849-9973-4b5b-b96d-992dad719ca0"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"b121d393-864a-4890-8dcf-7939af3d2fad"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"04d47e66-0def-4126-b9cf-26f1823c7def"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"41f60c09-4534-44d1-818f-7e13858032d8"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"5dbd3440-431c-406a-b968-a530eb2e1da9"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"fa0ed7ab-c0e3-42ba-9b86-91bb5c47477d"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"e316739f-829b-4ba2-935c-110e02600e1b"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"df5b1c00-d347-4829-ae47-c41d74122251"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"4ca1284c-ec11-49bc-82cd-ad449e068432"}},"objectType":"Table"}]
+
+expression 'DirectQuery to AS - PBI_Audit 2' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/Power%20Bi%20Admin", "PBI_Audit"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="0b351414-5094-4fa1-90d5-1afbce3219e4", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: 10933443-77cd-4582-99a6-4fec0606727f
+
+	annotation PBI_IncludeFutureArtifacts = True
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"9559647d-237f-4a83-aac9-cfc1bd3180cf"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"1349949c-1974-4238-9a22-26a676d2b982"}},"objectType":"Table"}]
+
+expression Parameter1 = #"Sample File" meta [IsParameterQuery=true, BinaryIdentifier=#"Sample File", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: fa79c960-32a6-45cc-9b68-329b512342b9
+	queryGroup: 'Transform File from Query1\Helper Queries'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transform Sample File' =
+		let
+		    Source = Excel.Workbook(Parameter1, null, true),
+		    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true])
+		in
+		    #"Promoted Headers"
+	lineageTag: f343f862-4ffb-4d61-97bf-ef3aba790781
+	queryGroup: 'Transform File from Query1'
+
+	annotation PBI_ResultType = Table
+
+expression 'Sample File' =
+		let
+		    Source = SharePoint.Files("https://iweof.sharepoint.com/teams/o365g_insightsandplanningenablers_irssemal-Teaminternal", [ApiVersion = 15]),
+		    #"Filtered Rows" = Table.SelectRows(Source, each ([Extension] = ".xlsx") and ([Date created] = #datetime(2023, 11, 27, 16, 30, 4))),
+		    Navigation1 = #"Filtered Rows"{0}[Content]
+		in
+		    Navigation1
+	lineageTag: 60582488-9c31-40c1-814d-30150cbccf55
+	queryGroup: 'Transform File from Query1\Helper Queries'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transform File' =
+		let
+		    Source = (Parameter1 as binary) => let
+		    Source = Excel.Workbook(Parameter1, null, true),
+		    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true])
+		in
+		    #"Promoted Headers"
+		in
+		    Source
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""Transform Sample File""}" ]
+	lineageTag: e4ac5ead-6663-49e6-841c-d0872bf35f7d
+	queryGroup: 'Transform File from Query1\Helper Queries'
+
+	annotation PBI_ResultType = Function
+
+expression Parameter2 = #"Sample File (2)" meta [IsParameterQuery=true, BinaryIdentifier=#"Sample File (2)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 923696b2-3daa-411c-a942-81503b6ed9ac
+	queryGroup: 'Transform File from Query1 (2)\Helper Queries'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transform Sample File (2)' =
+		let
+		    Source = Excel.Workbook(Parameter2, null, true),
+		    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true])
+		in
+		    #"Promoted Headers"
+	lineageTag: 2277d22a-676b-44aa-8b85-61b59eb30c27
+	queryGroup: 'Transform File from Query1 (2)'
+
+	annotation PBI_ResultType = Table
+
+expression 'Sample File (2)' =
+		let
+		    Source = SharePoint.Files("https://iweof.sharepoint.com/teams/o365g_insightsandplanningenablers_irssemal-Teaminternal/", [ApiVersion = 15]),
+		    #"Filtered Rows" = Table.SelectRows(Source, each ([Extension] = ".xlsx") and ([Date created] = #datetime(2023, 11, 27, 16, 38, 51))),
+		    Navigation1 = #"Filtered Rows"{0}[Content]
+		in
+		    Navigation1
+	lineageTag: 52d9237a-daf9-418e-a400-7eeb4d2c1bde
+	queryGroup: 'Transform File from Query1 (2)\Helper Queries'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transform File (2)' =
+		let
+		    Source = (Parameter2 as binary) => let
+		    Source = Excel.Workbook(Parameter2, null, true),
+		    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true])
+		in
+		    #"Promoted Headers"
+		in
+		    Source
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""Transform Sample File (2)""}" ]
+	lineageTag: 0d2fbc6e-bbfc-4450-b64c-0643fab4eb80
+	queryGroup: 'Transform File from Query1 (2)\Helper Queries'
+
+	annotation PBI_ResultType = Function
+

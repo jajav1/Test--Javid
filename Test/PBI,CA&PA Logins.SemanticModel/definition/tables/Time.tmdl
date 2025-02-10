@@ -1,0 +1,124 @@
+table Time
+	lineageTag: 61243e60-029d-421d-8572-8b3ef22c24de
+	sourceLineageTag: 6e513143-339c-48fa-8874-b79f6af25bfe
+
+	column TimeId
+		dataType: int64
+		formatString: 0
+		lineageTag: 92857a9e-1267-415e-b5dd-5d9eb8c0ce72
+		sourceLineageTag: fd6a2a3f-f865-41ee-aa0a-ffc131de0c5a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: TimeId
+
+		annotation SummarizationSetBy = User
+
+	column MinuteOrg
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 730d28d3-4e69-4e94-91a4-fd02ee1b735e
+		sourceLineageTag: c71c1b1d-1d89-4fc3-b209-758d1002b422
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MinuteOrg
+
+		annotation SummarizationSetBy = User
+
+	column 'Minute (#)'
+		dataType: int64
+		formatString: 0
+		lineageTag: b4e8b837-ea76-4b27-9443-bd6336edf3db
+		sourceLineageTag: d3081c1f-3297-4527-9805-9ca99edd43fe
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Minute (#)
+
+		annotation SummarizationSetBy = User
+
+	column Minute
+		dataType: string
+		lineageTag: 28fa5b78-daea-4f29-a54d-27e7e2bb84b4
+		sourceLineageTag: 81186f36-502e-4db8-95fe-2c8664e5123d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Minute
+
+		annotation SummarizationSetBy = User
+
+	column 'Quarter Hour'
+		dataType: string
+		lineageTag: 47478abd-373c-451f-8708-e7bcae2cc172
+		sourceLineageTag: 06cb1ecf-dadb-451f-9f79-d400f1b322aa
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Quarter Hour
+
+		annotation SummarizationSetBy = User
+
+	column 'Half Hour'
+		dataType: string
+		lineageTag: 8a20c05d-f0af-45df-aa53-028a91910e0f
+		sourceLineageTag: 53a19ca4-d28f-42df-a4a0-4f227e5fc8d8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Half Hour
+
+		annotation SummarizationSetBy = User
+
+	column 'Hour (#)'
+		dataType: int64
+		formatString: 0
+		lineageTag: 790324dd-c6ac-48e8-b9fb-2553ee992afd
+		sourceLineageTag: bdaa3048-4a32-447b-9428-3243cc69fd58
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Hour (#)
+
+		annotation SummarizationSetBy = User
+
+	column Hour
+		dataType: string
+		lineageTag: bf2fdc4d-d6d2-42b5-9e3f-a958a5073a63
+		sourceLineageTag: 0ea5e0b1-7956-408a-bcf4-53068e14eed9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Hour
+
+		annotation SummarizationSetBy = User
+
+	column 'Day Period Start'
+		dataType: string
+		lineageTag: e58de018-810c-426e-9af6-1027f3f98a21
+		sourceLineageTag: 4912ff56-a68f-474d-9650-b824ece08247
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Day Period Start
+
+		annotation SummarizationSetBy = User
+
+	column 'Day Period End'
+		dataType: string
+		lineageTag: 2e077172-ef9a-4742-b826-22746a4fab34
+		sourceLineageTag: 7b285085-2b47-4c2b-8a14-14668f9a558b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Day Period End
+
+		annotation SummarizationSetBy = User
+
+	column 'Day Period'
+		dataType: string
+		lineageTag: 02b550ae-549d-4bee-b365-61c725998b81
+		sourceLineageTag: d9b51c19-fa21-416a-af73-73f7744df2ce
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Day Period
+
+		annotation SummarizationSetBy = User
+
+	partition Time = entity
+		mode: directQuery
+		source
+			entityName: Time
+			expressionSource: 'DirectQuery to AS - PBI-monitoir-adx-Version1.0'
+

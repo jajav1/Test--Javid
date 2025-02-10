@@ -1,0 +1,102 @@
+table 1
+	lineageTag: 5375553f-9078-4ea8-b306-1972fc4a6908
+
+	measure '15 days' =
+			CALCULATE(
+			    COUNTROWS('1'),
+			    '1'[date_column] >= TODAY() - 15,
+			    '1'[date_column] <= TODAY()
+			)
+		formatString: 0
+		lineageTag: 3941b8cc-8152-47c1-b9e0-dd2c06db1f88
+
+	column Can_Specify_Security_Groups
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: d15c4db5-ed95-4e2c-838e-6bdb8d2c1499
+		summarizeBy: none
+		sourceColumn: Can_Specify_Security_Groups
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_column
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 161bf1f2-ec17-4a70-9acc-916afdf748a9
+		summarizeBy: none
+		sourceColumn: date_column
+
+		variation Variation
+			isDefault
+			relationship: df940783-da26-4ca0-933f-b574a0a95d34
+			defaultHierarchy: LocalDateTable_f3b23c99-ba52-482e-b0d0-8f9048645360.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Enabled
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 30940e2e-10bd-42d8-a7f2-caa9f0edbdfa
+		summarizeBy: none
+		sourceColumn: Enabled
+
+		annotation SummarizationSetBy = Automatic
+
+	column Group_Graphid
+		dataType: string
+		lineageTag: a53641b5-e78b-401a-b998-b6ba8c101019
+		summarizeBy: none
+		sourceColumn: Group_Graphid
+
+		annotation SummarizationSetBy = Automatic
+
+	column Group_Name
+		dataType: string
+		lineageTag: 908ecac0-7ea2-4e8e-acf4-7e655fe783ed
+		summarizeBy: none
+		sourceColumn: Group_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Setting_Name
+		dataType: string
+		lineageTag: 1fe8cdfa-b050-4ad4-bbd7-aef92911f355
+		summarizeBy: none
+		sourceColumn: Setting_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tenant_Setting_group
+		dataType: string
+		lineageTag: 6da33f03-d8e7-4bdd-8849-d214924b951c
+		summarizeBy: none
+		sourceColumn: Tenant_Setting_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: c0218ba1-5392-492a-bec0-0b3f70c811e1
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'last 15days' = IF('1'[date_column] >= TODAY() -1, '1'[Setting_Name], BLANK())
+		lineageTag: 078965a5-bd1d-41ec-87f0-870edc9921db
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 1 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\JAJAV1\Downloads\1.csv"),[Delimiter=",", Columns=8, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Can_Specify_Security_Groups", type logical}, {"date_column", type datetime}, {"Enabled", type logical}, {"Group_Graphid", type text}, {"Group_Name", type text}, {"Setting_Name", type text}, {"Tenant_Setting_group", type text}, {"Title", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

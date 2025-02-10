@@ -1,0 +1,22 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Sheet1"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.122.1066.0 (23.10)
+
+ref table Sheet1
+ref table DateTableTemplate_8d389d57-ba59-47cb-98cc-7c98a512c270
+ref table LocalDateTable_4cba45f9-a600-4154-a6cc-5b8b36e96ae6
+
+ref role 'Dallas and Mumbai'
+
+ref cultureInfo en-US
+

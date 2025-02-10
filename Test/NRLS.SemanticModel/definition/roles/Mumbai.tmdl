@@ -1,0 +1,9 @@
+role Mumbai
+	modelPermission: read
+
+	tablePermission Data
+
+	tablePermission User = [Name] = USERPRINCIPALNAME()
+
+	annotation PBI_Id = 3b76335cac89420381bbbcbf8b06a3bb
+

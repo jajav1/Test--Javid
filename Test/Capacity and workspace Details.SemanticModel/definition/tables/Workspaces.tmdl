@@ -1,0 +1,31 @@
+table Workspaces
+	lineageTag: 7bd61907-393a-4f9d-9b6c-c9861afd5368
+	sourceLineageTag: e19590ce-4997-42d3-b047-72004de912b3
+
+	column 'Workspace Id'
+		dataType: string
+		isNullable: false
+		lineageTag: 39f99a47-714a-4f42-a2c6-98bb0abd0834
+		sourceLineageTag: 25f59ade-d9f7-4915-b0b0-35a68cc2412a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Workspace Id
+
+		annotation SummarizationSetBy = User
+
+	column 'Workspace Name'
+		dataType: string
+		lineageTag: f417a40d-44d8-4c08-a246-2888cd6734b5
+		sourceLineageTag: 3fb1750b-8601-456b-911a-c80e90a3a50c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Workspace Name
+
+		annotation SummarizationSetBy = User
+
+	partition Workspaces = entity
+		mode: directQuery
+		source
+			entityName: Workspaces
+			expressionSource: 'DirectQuery to AS - Premium Chargeback Reporting'
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Workspace Count"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f0abecd0-5def-aa35-4a4b-c200f095fbc5"
+  }
+}

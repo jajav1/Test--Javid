@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "CA&PA Logins"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "931c1fa4-4f9f-8d7d-44c3-65c3d5fc681c"
+  }
+}

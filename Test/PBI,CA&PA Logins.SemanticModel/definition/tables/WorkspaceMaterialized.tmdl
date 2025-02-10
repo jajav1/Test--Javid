@@ -1,0 +1,92 @@
+table WorkspaceMaterialized
+	lineageTag: b6f3e6f6-7397-4424-b811-71654d1bdca5
+	sourceLineageTag: 4ca1284c-ec11-49bc-82cd-ad449e068432
+
+	column WorkspaceId
+		dataType: string
+		lineageTag: fa22bf37-cc94-4a49-b8c1-ffe8d50beca0
+		sourceLineageTag: d0caa7b4-b1ef-4835-9e99-564772935473
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WorkspaceId
+
+		annotation SummarizationSetBy = User
+
+	column Workspace
+		dataType: string
+		lineageTag: a883decf-9d1d-4780-8863-1683340e21bb
+		sourceLineageTag: 789f590a-9fa1-4f24-8a9f-7098d7fde126
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Workspace
+
+		annotation SummarizationSetBy = User
+
+	column Type
+		dataType: string
+		lineageTag: 43d32859-27b7-46b2-a824-3f3fcd1eb6c7
+		sourceLineageTag: 85038122-c472-4ac9-a55e-f58bfa74a827
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = User
+
+	column State
+		dataType: string
+		lineageTag: 9d374401-4048-45bd-87ed-beca35d27889
+		sourceLineageTag: 9b70275f-0892-40a2-9122-0c3f18808966
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = User
+
+	column IsOnDedicatedCapacity
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 1eb07ae4-730e-46d9-b080-874669db0811
+		sourceLineageTag: 7da83275-8193-4369-a835-584da6b8b277
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: IsOnDedicatedCapacity
+
+		annotation SummarizationSetBy = User
+
+	column Description
+		dataType: string
+		lineageTag: 3daff452-2afc-4300-9d38-5169b87502e3
+		sourceLineageTag: 5e59c99a-6ec8-472c-8365-767e11688006
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = User
+
+	column CapacityId
+		dataType: string
+		lineageTag: 9e455ca3-ee61-4549-847b-03482cdb7b8d
+		sourceLineageTag: bd87df37-7174-4a24-b053-6d4d83f89b5f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CapacityId
+
+		annotation SummarizationSetBy = User
+
+	column WithContent
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: cd509cdd-e867-4b26-b239-1c9930917e8a
+		sourceLineageTag: c485b2cc-d184-4869-9154-e607b0371c9b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WithContent
+
+		annotation SummarizationSetBy = User
+
+	partition WorkspaceMaterialized = entity
+		mode: directQuery
+		source
+			entityName: WorkspaceMaterialized
+			expressionSource: 'DirectQuery to AS - PBI_Audit 2'
+

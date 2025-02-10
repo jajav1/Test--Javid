@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Test Capacity1"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d00959ec-1e3e-bd1f-4096-320c4cbec4c4"
+  }
+}

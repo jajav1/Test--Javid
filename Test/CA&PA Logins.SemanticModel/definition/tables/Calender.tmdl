@@ -1,0 +1,302 @@
+table Calender
+	lineageTag: 3ad0ac12-c86b-4446-8e0b-668ba0a2dc51
+	sourceLineageTag: b3e84d46-fa45-4e6c-8008-97ef6e6889a0
+
+	column DateOrg
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: c0f0bbd5-bc73-44d7-89d9-71161c1d3ec2
+		sourceLineageTag: 9a9d636f-0bb0-49ad-b411-72d3315c4e14
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DateOrg
+
+		annotation SummarizationSetBy = User
+
+	column Date
+		dataType: dateTime
+		isNullable: false
+		formatString: Long Date
+		lineageTag: b743b365-0952-44a2-9cce-9fcebe9a05ff
+		sourceLineageTag: 551fbc90-b41a-453a-a171-8d7887b45043
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = User
+
+	column DateId
+		dataType: int64
+		formatString: 0
+		lineageTag: de6f9b43-e27f-4d52-8fd6-e74c8ed207fe
+		sourceLineageTag: 32a86f09-176f-485f-ac97-81e1b57c7c6d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DateId
+
+		annotation SummarizationSetBy = User
+
+	column Day
+		dataType: int64
+		formatString: 0
+		lineageTag: ce063d61-4e60-4dce-82db-1e9384533637
+		sourceLineageTag: 07cb5c71-791f-4f4b-afd1-74db6635d6a4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Day
+
+		annotation SummarizationSetBy = User
+
+	column Month
+		dataType: string
+		lineageTag: e61c4f0c-fe06-41d5-acff-4d737150dc6e
+		sourceLineageTag: 15d4c406-563b-4cf2-a4cf-b7df03636725
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Month
+		sortByColumn: MonthNR
+
+		annotation SummarizationSetBy = User
+
+	column Week
+		dataType: int64
+		formatString: 0
+		lineageTag: 5aee033c-00aa-4dc0-84fd-2320985c073e
+		sourceLineageTag: 5c1589ed-218f-442a-a5ea-03de45983efa
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Week
+
+		annotation SummarizationSetBy = User
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: a7e3d933-684f-4e26-a24f-7f47d9bf2742
+		sourceLineageTag: ff6e3b99-f66d-4de3-8e4f-a718cf44f1b8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = User
+
+	column Semester
+		dataType: int64
+		formatString: 0
+		lineageTag: 8bab183b-4828-47b7-8576-a532fce27e6b
+		sourceLineageTag: c11b47fa-221c-4bdc-b012-eb7d3f179813
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Semester
+
+		annotation SummarizationSetBy = User
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: fc82766c-b18c-4fa1-bec3-d5fd72f1ef75
+		sourceLineageTag: e665d520-69e2-46b9-89de-e1f7df6f476c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = User
+
+	column WeekYearID
+		dataType: int64
+		formatString: 0
+		lineageTag: 2dc6c91d-64fa-426a-96f6-77c23e016646
+		sourceLineageTag: 815962a2-afbc-437a-9b15-26474fda2e94
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WeekYearID
+
+		annotation SummarizationSetBy = User
+
+	column MonthYearID
+		dataType: int64
+		formatString: 0
+		lineageTag: e5beca09-1d63-4c99-b2c9-e8c6a7694b92
+		sourceLineageTag: b82269d9-0fe1-49a1-818a-fe6395c94459
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MonthYearID
+
+		annotation SummarizationSetBy = User
+
+	column QuarterYearId
+		dataType: int64
+		formatString: 0
+		lineageTag: 130c13bd-74d0-41df-ad60-3e88fadfa526
+		sourceLineageTag: d31b289c-b9d4-43df-901a-9ffd3a9e2cdb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: QuarterYearId
+
+		annotation SummarizationSetBy = User
+
+	column SemesterYearId
+		dataType: int64
+		formatString: 0
+		lineageTag: c3092677-9a4b-4461-af82-f6716eb1c6bb
+		sourceLineageTag: a59cb6e7-6db8-45a9-8f5b-70166584f7f6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SemesterYearId
+
+		annotation SummarizationSetBy = User
+
+	column WeekDayNR
+		dataType: int64
+		formatString: 0
+		lineageTag: ad3de1ae-9aa9-4218-a71e-24b2283e8d34
+		sourceLineageTag: 7c4d3ff9-b949-49e7-a6ce-62b979b4e9ef
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WeekDayNR
+
+		annotation SummarizationSetBy = User
+
+	column WeekDay
+		dataType: string
+		lineageTag: 6d7c1177-ebb5-4487-90fb-e44ae786e3fc
+		sourceLineageTag: 6ec5818b-a3f0-4f48-bca3-3c715b56e5fe
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WeekDay
+		sortByColumn: WeekDayNR
+
+		annotation SummarizationSetBy = User
+
+	column MonthLong
+		dataType: string
+		lineageTag: 38fca292-f626-42e7-8f61-1d568ad97d28
+		sourceLineageTag: 020a585b-75cf-4bd3-a333-39f4563eaea5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MonthLong
+
+		annotation SummarizationSetBy = User
+
+	column WeekYear
+		dataType: string
+		lineageTag: 8b129805-8d44-4689-aad9-6bae2e859cbc
+		sourceLineageTag: b13253e2-955c-4102-a1cb-835dbfe4bded
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WeekYear
+
+		annotation SummarizationSetBy = User
+
+	column MonthYear
+		dataType: string
+		lineageTag: d7293364-3969-498d-a16a-99160b82d370
+		sourceLineageTag: d724fc64-17a3-48c6-bc15-f2910219e5a4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MonthYear
+		sortByColumn: MonthNR
+
+		annotation SummarizationSetBy = User
+
+	column QuarterYear
+		dataType: string
+		lineageTag: 0f135e14-33f9-4923-8ad1-d491a3a74ad7
+		sourceLineageTag: 7eb2697f-566d-4f9a-af32-0b2a4f85b551
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: QuarterYear
+
+		annotation SummarizationSetBy = User
+
+	column SemesterYear
+		dataType: string
+		lineageTag: 04fde757-86f4-4cef-9b76-477e675d9962
+		sourceLineageTag: 46dabfb1-267d-4026-99f7-af93cd080ea0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SemesterYear
+
+		annotation SummarizationSetBy = User
+
+	column WeekStartDate
+		dataType: string
+		lineageTag: bac6bdf1-da59-4381-9e3f-2ea041399021
+		sourceLineageTag: 9eeda740-4cbf-48d0-84f3-44e838c82620
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WeekStartDate
+
+		annotation SummarizationSetBy = User
+
+	column WeekEndDate
+		dataType: string
+		lineageTag: b8521725-dd58-4282-8140-8081574687df
+		sourceLineageTag: 64fab780-7610-4e40-a537-7688dfdff2c4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WeekEndDate
+
+		annotation SummarizationSetBy = User
+
+	column DayRelative
+		dataType: int64
+		formatString: 0
+		lineageTag: 222c443a-e123-46f4-9ec4-12916c8e6dfb
+		sourceLineageTag: 5d82ceea-f4a4-485a-8597-b5ae68659815
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DayRelative
+
+		annotation SummarizationSetBy = User
+
+	column WeekRelative
+		dataType: double
+		lineageTag: d6849989-f4ee-4439-969d-f33d018fd62a
+		sourceLineageTag: ffe69e09-6f6e-4be9-9f9c-5fe90a0f620f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WeekRelative
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column YearRelative
+		dataType: int64
+		formatString: 0
+		lineageTag: 4be4bc4b-ce8e-416e-bd34-17effd3df573
+		sourceLineageTag: 39acae7e-26b5-4252-b9c6-0376fbb6e7ab
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: YearRelative
+
+		annotation SummarizationSetBy = User
+
+	column Workday
+		dataType: string
+		lineageTag: 55c4c464-ca69-4e67-9513-db408b44ed36
+		sourceLineageTag: be211bc2-1ab4-46e4-9c3e-ca54a288ef6c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Workday
+
+		annotation SummarizationSetBy = User
+
+	column MonthNR
+		dataType: int64
+		formatString: 0
+		lineageTag: b2c45648-ee33-4697-b650-83d0c6253105
+		sourceLineageTag: 48880927-2d05-43da-9869-9db86fe96d9a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MonthNR
+
+		annotation SummarizationSetBy = User
+
+	partition Calender = entity
+		mode: directQuery
+		source
+			entityName: Calender
+			expressionSource: 'DirectQuery to AS - PBI-monitoir-adx-Version1.0'
+

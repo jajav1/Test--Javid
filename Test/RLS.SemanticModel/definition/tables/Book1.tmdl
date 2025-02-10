@@ -1,0 +1,44 @@
+table Book1
+	lineageTag: a7e8ccad-a7ca-497e-aed1-97a1dfcedbde
+
+	measure user = USERNAME()
+		lineageTag: 9e6d439c-801a-4e69-81a9-ea741fc16761
+
+	column Name
+		dataType: string
+		lineageTag: dab68984-27b5-40a0-91b9-145aab33f719
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Email '
+		dataType: string
+		lineageTag: 5629f7a2-b0f9-4756-b14f-59a2d74457f0
+		summarizeBy: none
+		sourceColumn: "Email "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sl number'
+		dataType: int64
+		formatString: 0
+		lineageTag: f71b2a79-669b-4be6-9eb9-c8d0cfc05ab2
+		summarizeBy: sum
+		sourceColumn: Sl number
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Book1 = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\JAJAV1\OneDrive - IKEA\Desktop\Book1.xlsx"), null, true),
+				    Book1_Sheet = Source{[Item="Book1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Book1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Name", type text}, {"Email ", type text}, {"Sl number", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

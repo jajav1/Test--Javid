@@ -1,0 +1,51 @@
+{
+  "config": "{\"version\":\"5.49\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU11\",\"version\":\"5.50\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU11",
+            "path": "BaseThemes/CY23SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3e3ebce5d0e8e16bb0a0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":39.68534452928557,\"z\":0,\"width\":648.1939606449977,\"height\":410.08189346928424,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Catalog - Permission.IdentityId\"},{\"queryRef\":\"Catalog - Workspace.Workspace\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Catalog - Permission\",\"Type\":0},{\"Name\":\"c1\",\"Entity\":\"Catalog - Workspace\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"IdentityId\"},\"Name\":\"Catalog - Permission.IdentityId\",\"NativeReferenceName\":\"IdentityId\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"Workspace\"},\"Name\":\"Catalog - Workspace.Workspace\",\"NativeReferenceName\":\"Workspace\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 410.08,
+          "width": 648.19,
+          "x": 0.00,
+          "y": 39.69,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"822284b12e6343008bd2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":460,\"width\":648,\"height\":260,\"z\":1,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Catalog - Permission.AccessRight\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Catalog - Permission\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"AccessRight\"},\"Name\":\"Catalog - Permission.AccessRight\",\"NativeReferenceName\":\"AccessRight\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Catalog - Permission\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"AccessRight\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Admin'\"}}]]}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 260.00,
+          "width": 648.00,
+          "x": 0.00,
+          "y": 460.00,
+          "z": 1.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

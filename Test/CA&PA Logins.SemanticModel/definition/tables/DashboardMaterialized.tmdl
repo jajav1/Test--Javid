@@ -1,0 +1,61 @@
+table DashboardMaterialized
+	lineageTag: 7c2cc174-3b7f-4ea4-9830-d544af8d0061
+	sourceLineageTag: f895c1fd-3a67-43a8-b67c-080827de9ad1
+
+	column WorkspaceId
+		dataType: string
+		lineageTag: c4ab71dd-38ed-405a-a1eb-16c304a715c1
+		sourceLineageTag: 760ffc4e-1dc5-4b25-b6ef-2e42fc5034a3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WorkspaceId
+
+		annotation SummarizationSetBy = User
+
+	column DashboardId
+		dataType: string
+		lineageTag: 92e811ac-db87-4b7a-afc9-a3fb5851bbb3
+		sourceLineageTag: e519f91a-c254-4bfe-9e99-2ba12183a584
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DashboardId
+
+		annotation SummarizationSetBy = User
+
+	column Dashboard
+		dataType: string
+		lineageTag: c6f42c59-997c-4d03-8568-e238d613a17c
+		sourceLineageTag: 263150c9-30dc-4297-89e7-9d6543ba26a3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Dashboard
+
+		annotation SummarizationSetBy = User
+
+	column IsReadOnly
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c76d3625-1678-4fe8-9606-2b4af81007dc
+		sourceLineageTag: fc361caf-7d8c-4991-8c50-636f8eb859f2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: IsReadOnly
+
+		annotation SummarizationSetBy = User
+
+	column AppId
+		dataType: string
+		lineageTag: 60489e5f-cd2c-466d-a479-9eaac32d147a
+		sourceLineageTag: 1cf78863-9df3-4853-b28a-537761eb03e5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AppId
+
+		annotation SummarizationSetBy = User
+
+	partition DashboardMaterialized = entity
+		mode: directQuery
+		source
+			entityName: DashboardMaterialized
+			expressionSource: 'DirectQuery to AS - PBI_Audit 2'
+

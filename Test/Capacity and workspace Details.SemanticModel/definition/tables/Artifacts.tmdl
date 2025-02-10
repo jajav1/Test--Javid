@@ -1,0 +1,41 @@
+table Artifacts
+	lineageTag: 0e71f9b0-ea9e-445d-b686-7386fdefaf1a
+	sourceLineageTag: 4a6d5789-f010-4ac8-8be4-70474023706d
+
+	column 'Artifact Id'
+		dataType: string
+		isNullable: false
+		lineageTag: 247eb369-79d0-4572-80de-57b1b0cd15f1
+		sourceLineageTag: 268e7ee3-8ab7-4e7d-9a0b-d20cb28e56fd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Artifact Id
+
+		annotation SummarizationSetBy = User
+
+	column 'Artifact Kind'
+		dataType: string
+		lineageTag: 81a6100b-f6e3-4f8c-8d48-42181437e259
+		sourceLineageTag: f58f86e6-5b0e-4b24-bbd9-e907baf936a0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Artifact Kind
+
+		annotation SummarizationSetBy = User
+
+	column 'Artifact Name'
+		dataType: string
+		lineageTag: 7a4879cd-7d98-4930-b6c6-af198ecf9c4c
+		sourceLineageTag: fdb23984-556f-4474-a53b-2c5f795e70c1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Artifact Name
+
+		annotation SummarizationSetBy = User
+
+	partition Artifacts = entity
+		mode: directQuery
+		source
+			entityName: Artifacts
+			expressionSource: 'DirectQuery to AS - Premium Chargeback Reporting'
+

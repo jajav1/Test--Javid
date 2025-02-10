@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Capacity and workspace Details"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3b031686-6ec8-b304-4fad-023490b6e506"
+  }
+}

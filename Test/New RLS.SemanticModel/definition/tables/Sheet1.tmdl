@@ -1,0 +1,66 @@
+table Sheet1
+	lineageTag: c41cd578-8264-4e2a-8915-b991690823eb
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 179272b7-524a-45c8-b93a-5ffa78fb9a52
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 54b1cdda-12e0-4de0-b818-5c9d805ea9f7
+			defaultHierarchy: LocalDateTable_4cba45f9-a600-4154-a6cc-5b8b36e96ae6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Location
+		dataType: string
+		lineageTag: 8f399543-fb69-4692-9e55-6fc3d05d6b30
+		summarizeBy: none
+		sourceColumn: Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product name'
+		dataType: string
+		lineageTag: cbb44452-f674-40d9-af49-8f029c29a16f
+		summarizeBy: none
+		sourceColumn: Product name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Qty
+		dataType: int64
+		formatString: 0
+		lineageTag: 06530a1c-ace0-49fb-86f7-9c68ca06f7e7
+		summarizeBy: sum
+		sourceColumn: Qty
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amt
+		dataType: int64
+		formatString: 0
+		lineageTag: 197111d8-96f4-461b-9657-8a488c64b56d
+		summarizeBy: sum
+		sourceColumn: Amt
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Sheet1 = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\JAJAV1\OneDrive - IKEA\Desktop\New RLS.xlsx"), null, true),
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Date", type date}, {"Location", type text}, {"Product name", type text}, {"Qty", Int64.Type}, {"Amt", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,24 @@
+expression 'DirectQuery to AS - Premium Chargeback Reporting' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/IPE%20Shared%20-%20Premium%20Chargeback%20Reporting", "Premium Chargeback Reporting"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: 28a600fe-36df-4d4a-a8b3-15767cf32691
+
+	annotation PBI_IncludeFutureArtifacts = True
+
+expression 'DirectQuery to AS - PBI-monitoir-adx-Version1.0' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/Power%20Bi%20Admin", "PBI-monitoir-adx-Version1.0"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: 55bd707b-2e46-46be-8b1f-38ced974e4bf
+
+	annotation PBI_IncludeFutureArtifacts = True
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"ee44c343-d01b-429e-a11b-723df75ba0f1"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"b3e84d46-fa45-4e6c-8008-97ef6e6889a0"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"6e513143-339c-48fa-8874-b79f6af25bfe"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"948ee865-3b7d-47be-be12-6b52b43d1688"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"77777c16-db05-4777-9811-bb7996fd0fba"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"5839a307-c642-4fac-925f-dff4c21a001e"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"21aa97d2-5ab7-406a-95d8-8205037f90b1"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"59a0f753-4f56-4024-9182-b82c4e59e5e9"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"630605e7-f4a2-4dda-ab24-bd73f8d0fda5"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"db9d3426-9214-4ed7-998f-f559c66c8f71"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"55c0f022-0e3e-40f6-a656-7ba86c173de3"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"7ec80820-2820-446e-b5f3-9ce975045d2f"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"9cf4f31c-1c82-4df5-8600-9addb8f65319"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"01427627-4f5d-4640-91e8-d4ca9af032c0"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"33c44966-6e8c-4961-8495-06e6e11f8765"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"4571e3a8-b862-4e43-8040-383755cc5fce"}},"objectType":"Table"}]
+

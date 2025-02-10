@@ -1,0 +1,227 @@
+table fabric_query_starting
+	lineageTag: 61de7b9e-6ae5-4511-9fa5-b679e1fb170e
+	sourceLineageTag: fd153f54-694a-4a9d-9f51-295718827183
+
+	column TIMESTAMP
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: a3e3254b-bfc0-4777-9445-3655379e2eea
+		sourceLineageTag: f422ee64-b138-4ee0-ae3c-c8038552dd8f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: TIMESTAMP
+
+		annotation SummarizationSetBy = User
+
+	column distributed_statement_id
+		dataType: string
+		lineageTag: 59fb17fb-b759-4ba6-b879-c390a43aec87
+		sourceLineageTag: e2dc3d3b-e4a7-4537-9845-49aececb0436
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: distributed_statement_id
+
+		annotation SummarizationSetBy = User
+
+	column database_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 10912fd6-1550-4585-a040-ad5438079109
+		sourceLineageTag: 3d2a7c3d-102d-4d86-9776-1070850f4b59
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: database_id
+
+		annotation SummarizationSetBy = User
+
+	column database_name
+		dataType: string
+		lineageTag: 34102840-fb16-4496-b243-4e3c3231ee1d
+		sourceLineageTag: 7a6277fb-45e6-45b4-8a2a-b383ac4aaf6b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: database_name
+
+		annotation SummarizationSetBy = User
+
+	column statement_number
+		dataType: int64
+		formatString: 0
+		lineageTag: 695a4799-ee3b-48a3-a25e-a44278cbd37c
+		sourceLineageTag: a02310e6-1e5a-422f-8e75-c40932eb1be0
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: statement_number
+
+		annotation SummarizationSetBy = User
+
+	column query_text_hash
+		dataType: string
+		lineageTag: a2be606b-f17c-4fbb-96d4-54dcba302c49
+		sourceLineageTag: 720bd00a-6644-43ae-9701-7db6422cee5e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: query_text_hash
+
+		annotation SummarizationSetBy = User
+
+	column obfuscated_query_text_hash
+		dataType: string
+		lineageTag: e938b146-42cb-433f-8472-93e3f4dbc3ff
+		sourceLineageTag: 8f64bb4d-0880-4d68-aed1-740f60b0aafb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: obfuscated_query_text_hash
+
+		annotation SummarizationSetBy = User
+
+	column statement
+		dataType: string
+		lineageTag: 45c5c8d2-7556-492c-94e8-21ce74b34023
+		sourceLineageTag: 7e486c9e-5ae1-4049-82c8-f80e1cadb269
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: statement
+
+		annotation SummarizationSetBy = User
+
+	column batch_id
+		dataType: string
+		lineageTag: 8a763c5d-34ce-405d-a016-cacd64651529
+		sourceLineageTag: b83de5ca-48d9-4bc7-ae28-95b5855c7874
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: batch_id
+
+		annotation SummarizationSetBy = User
+
+	column root_batch_id
+		dataType: string
+		lineageTag: 7a54cd74-3c6a-4d4b-99b0-eca1dd65a74c
+		sourceLineageTag: cc45c13e-13b9-4a7f-9f2d-ddf3d9b67769
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: root_batch_id
+
+		annotation SummarizationSetBy = User
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		lineageTag: df18e4c8-c6aa-47df-89ee-bb79dd19eda4
+		sourceLineageTag: 3ed47e86-45f2-45ab-9b7b-f1f6d64ba212
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = User
+
+	column session_id
+		dataType: int64
+		formatString: 0
+		lineageTag: ea6052e4-3e59-4737-a502-66adfeefdee0
+		sourceLineageTag: 4730a806-9d99-4b73-9e4d-ee1a4f98e026
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = User
+
+	column connection_id
+		dataType: string
+		lineageTag: c5a5c04c-8969-481d-8a5f-a82972a236cc
+		sourceLineageTag: e9ab5eb6-73c1-44d2-9d91-36c4264ec836
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: connection_id
+
+		annotation SummarizationSetBy = User
+
+	column capacity_id
+		dataType: string
+		lineageTag: 6f1741c5-8688-4e89-8c13-dea69f7bd8a9
+		sourceLineageTag: f5e153c9-07a8-4088-9a68-cae5713a3704
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: capacity_id
+
+		annotation SummarizationSetBy = User
+
+	column artifact_id
+		dataType: string
+		lineageTag: 5bd5cf7f-59ca-4767-a87a-0648c138160f
+		sourceLineageTag: 9e27e428-48eb-406a-955e-3c2d4b38c0f9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: artifact_id
+
+		annotation SummarizationSetBy = User
+
+	column workspace_id
+		dataType: string
+		lineageTag: 2798b2f5-e0b1-4772-b92b-bb9d0cdf8516
+		sourceLineageTag: b350e35f-4b82-46ca-81d6-f946615b3634
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: workspace_id
+
+		annotation SummarizationSetBy = User
+
+	column login_name
+		dataType: string
+		lineageTag: bd26435f-f641-4464-9cba-4aa116f26ab0
+		sourceLineageTag: 765bb523-131a-4e6b-b731-90ced66c36c9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: login_name
+
+		annotation SummarizationSetBy = User
+
+	column label
+		dataType: string
+		lineageTag: 9d6e768a-1ed3-48b5-aca1-4a8b80bf7a60
+		sourceLineageTag: a2c300db-81db-463f-a03d-953bb3621d31
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: label
+
+		annotation SummarizationSetBy = User
+
+	column program_name
+		dataType: string
+		lineageTag: e3845f6a-78da-499b-a17b-e5e891433c4f
+		sourceLineageTag: ac06ff69-2b45-4824-a546-6e9bee713e46
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: program_name
+
+		annotation SummarizationSetBy = User
+
+	column end_compile_time
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 6d33b547-6b79-4f75-a462-8413f3dc3c27
+		sourceLineageTag: 53cba016-a5de-41a4-80bf-c499a0df2758
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: end_compile_time
+
+		annotation SummarizationSetBy = User
+
+	column submit_time
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 898fa760-24a8-4c41-aa11-cf7d54def93c
+		sourceLineageTag: 71366d51-8a7d-499e-94fa-1307f460fd37
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: submit_time
+
+		annotation SummarizationSetBy = User
+
+	partition fabric_query_starting = entity
+		mode: directQuery
+		source
+			entityName: fabric_query_starting
+			expressionSource: 'DirectQuery to AS - PBI_Audit 2'
+

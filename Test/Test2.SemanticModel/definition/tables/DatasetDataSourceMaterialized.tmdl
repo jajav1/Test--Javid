@@ -1,0 +1,32 @@
+table DatasetDataSourceMaterialized
+	lineageTag: 19fad90d-d018-4259-bc12-47067a54df1e
+	sourceLineageTag: bbbde964-3c5d-4a1b-900a-d1719a5bbae6
+
+	column DatasetId
+		dataType: string
+		lineageTag: 9d15e7ec-ca67-43b5-85db-ab86e3858d71
+		sourceLineageTag: 150fc640-3614-46ff-809a-d0b9a83df46e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DatasetId
+
+		annotation SummarizationSetBy = User
+
+	column DataSourceId
+		dataType: string
+		lineageTag: 6a639100-123b-44b5-a6ec-07b7a9e9b2a1
+		sourceLineageTag: 92738bca-03de-4e85-a540-9e655cdfded4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DataSourceId
+
+		annotation SummarizationSetBy = User
+
+	partition DatasetDataSourceMaterialized = entity
+		mode: directQuery
+		source
+			entityName: DatasetDataSourceMaterialized
+			expressionSource: 'DirectQuery to AS - PBI_Audit'
+
+	annotation PBI_ResultType = Table
+

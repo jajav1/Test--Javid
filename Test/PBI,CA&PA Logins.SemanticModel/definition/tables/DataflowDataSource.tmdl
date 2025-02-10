@@ -1,0 +1,40 @@
+table DataflowDataSource
+	lineageTag: 282301cc-14a5-4fa7-95e2-88c6898e27bf
+	sourceLineageTag: efe8708f-28d1-4bb4-8ab3-92df8073cad9
+
+	column DataflowId
+		dataType: string
+		lineageTag: 678b918c-8d92-46e0-8dbb-2c2e183a81a5
+		sourceLineageTag: 4d5b622c-73be-4429-86de-b09cf477fdf5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DataflowId
+
+		annotation SummarizationSetBy = User
+
+	column DataSourceId
+		dataType: string
+		lineageTag: dd03f023-df5d-4083-ab09-7bac8182db54
+		sourceLineageTag: 9cedf09d-ae1f-4494-859a-442f2d1e99dc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DataSourceId
+
+		annotation SummarizationSetBy = User
+
+	column scanCreatedDateTime
+		dataType: string
+		lineageTag: 6f29053c-f240-46e3-aa1b-5845c283e005
+		sourceLineageTag: 44365f4b-2353-4650-8a74-c0b941b22068
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: scanCreatedDateTime
+
+		annotation SummarizationSetBy = User
+
+	partition DataflowDataSource = entity
+		mode: directQuery
+		source
+			entityName: DataflowDataSource
+			expressionSource: 'DirectQuery to AS - PBI_Audit 2'
+

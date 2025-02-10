@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "PBI,CA&PA Logins"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "604870e3-d9e8-8403-41f9-ebdd110a8e13"
+  }
+}

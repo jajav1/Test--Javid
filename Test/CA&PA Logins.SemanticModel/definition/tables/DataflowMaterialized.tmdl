@@ -1,0 +1,100 @@
+table DataflowMaterialized
+	lineageTag: f0491853-7afe-4842-bae7-f70b832ddcc0
+	sourceLineageTag: db78a849-9973-4b5b-b96d-992dad719ca0
+
+	column WorkspaceId
+		dataType: string
+		lineageTag: 60e4699e-d7f8-40b5-957e-7018f12791a6
+		sourceLineageTag: 9fba558d-80f7-41e4-b9b3-ce8625bff973
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WorkspaceId
+
+		annotation SummarizationSetBy = User
+
+	column DataflowId
+		dataType: string
+		lineageTag: 06171ce7-111f-4416-b752-efad75b18eb1
+		sourceLineageTag: 4f4f2775-5b6c-4ba2-a45d-f60b52e8bccd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DataflowId
+
+		annotation SummarizationSetBy = User
+
+	column Dataflow
+		dataType: string
+		lineageTag: 37cc7270-caa9-4859-8e1f-9561a10ab839
+		sourceLineageTag: bff34031-806f-466a-9783-adeb42ecda23
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Dataflow
+
+		annotation SummarizationSetBy = User
+
+	column Description
+		dataType: string
+		lineageTag: 64b4b896-690f-4ada-a4d8-4991940dddf5
+		sourceLineageTag: 101ebf84-9f5f-4e6e-a38f-d15a500c14eb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = User
+
+	column ConfiguredBy
+		dataType: string
+		lineageTag: cd549e35-aa2d-4dc0-8a58-c5a19e0be793
+		sourceLineageTag: d344da1d-897e-4e71-83a6-a5a315943c71
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ConfiguredBy
+
+		annotation SummarizationSetBy = User
+
+	column ModifiedBy
+		dataType: string
+		lineageTag: 68276911-7801-408f-98b8-54ab1db96ede
+		sourceLineageTag: ec037045-6318-4de4-bf22-a0302dc20579
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ModifiedBy
+
+		annotation SummarizationSetBy = User
+
+	column ModifiedOn
+		dataType: string
+		lineageTag: 1860add0-d5d0-4aab-ba11-5979f4fb088b
+		sourceLineageTag: 509b46ab-869e-4096-84dd-b2625fb7a9e0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ModifiedOn
+
+		annotation SummarizationSetBy = User
+
+	column Endorsement
+		dataType: string
+		lineageTag: d38c3893-a7bb-4bfe-aa5d-671dfa501422
+		sourceLineageTag: 18f3d035-812a-463e-93f7-20a48096eeeb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Endorsement
+
+		annotation SummarizationSetBy = User
+
+	column CertifiedBy
+		dataType: string
+		lineageTag: 7feaa993-a802-472b-beba-ffeb4b94efb3
+		sourceLineageTag: ae5d15a6-21fc-4c54-b305-3898f8cf87bd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CertifiedBy
+
+		annotation SummarizationSetBy = User
+
+	partition DataflowMaterialized = entity
+		mode: directQuery
+		source
+			entityName: DataflowMaterialized
+			expressionSource: 'DirectQuery to AS - PBI_Audit 2'
+

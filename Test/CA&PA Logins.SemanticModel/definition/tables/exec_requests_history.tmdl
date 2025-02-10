@@ -1,0 +1,155 @@
+table exec_requests_history
+	lineageTag: 522d4992-6836-4ba5-ae9a-c8f8500aafb5
+	sourceLineageTag: ee3ebc31-8325-4e23-b213-c2aafddb46bb
+
+	column distributed_statement_id
+		dataType: string
+		lineageTag: 4b76395a-0f10-4c2f-9923-8ba87539ed73
+		sourceLineageTag: b9967f95-1fe8-4dbe-94e0-7babfbe4cb81
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: distributed_statement_id
+
+		annotation SummarizationSetBy = User
+
+	column start_time
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 3535d427-73ca-4106-87ea-109de028f0c2
+		sourceLineageTag: 6a5a7a59-2d76-4ef6-ab86-8e3a0b1fbe44
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: start_time
+
+		annotation SummarizationSetBy = User
+
+	column end_time
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: c2d56134-f978-4dcc-9551-7e7a61266cf9
+		sourceLineageTag: 4a6740c1-e393-4265-b7c8-f7b58742409f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: end_time
+
+		annotation SummarizationSetBy = User
+
+	column total_elapsed_time_ms
+		dataType: int64
+		formatString: 0
+		lineageTag: 72cca39b-d043-4b6c-921b-751bdbbd59f3
+		sourceLineageTag: 6b20e530-c271-46e1-a6bb-428fff77e187
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: total_elapsed_time_ms
+
+		annotation SummarizationSetBy = User
+
+	column login_name
+		dataType: string
+		lineageTag: e64fecc4-ff21-4ece-963f-1f3a147f2135
+		sourceLineageTag: 385cfa3a-b22c-4c43-aacc-40587fbb774f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: login_name
+
+		annotation SummarizationSetBy = User
+
+	column row_count
+		dataType: int64
+		formatString: 0
+		lineageTag: de65d876-bfa6-485b-af4a-53743d9d720c
+		sourceLineageTag: e23cecb6-8371-4ed5-bcc4-da58149edb3e
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: row_count
+
+		annotation SummarizationSetBy = User
+
+	column status
+		dataType: string
+		lineageTag: a29a440f-18e9-4ed0-b0b6-2a668500e228
+		sourceLineageTag: 20c86175-4bd4-47c4-88e5-ba291e649336
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = User
+
+	column session_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 01deec35-abcb-4701-8a03-fe6cdad835bc
+		sourceLineageTag: a4365dc6-5fba-4697-bdd1-96e6263ca991
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = User
+
+	column connection_id
+		dataType: string
+		lineageTag: 63bd03fb-4fd7-4d7f-94e5-5027d6fefa45
+		sourceLineageTag: 664db760-9571-401b-a29a-bc6f3a1f75ad
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: connection_id
+
+		annotation SummarizationSetBy = User
+
+	column program_name
+		dataType: string
+		lineageTag: e72c1e89-3fcd-4870-b8c8-c361a8dc6a1e
+		sourceLineageTag: 2c2fa792-4c1b-4a42-8249-ece6a86fe3d7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: program_name
+
+		annotation SummarizationSetBy = User
+
+	column batch_id
+		dataType: string
+		lineageTag: 15f984c0-c932-4a5a-be5c-433c87d258ed
+		sourceLineageTag: 4612abb8-2578-4691-82db-dba456b17af1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: batch_id
+
+		annotation SummarizationSetBy = User
+
+	column root_batch_id
+		dataType: string
+		lineageTag: 4b72bff9-6932-4bd2-97e4-fdd82b8e850d
+		sourceLineageTag: 18c4ac01-e6c9-4b6e-89e3-5e26d98610ee
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: root_batch_id
+
+		annotation SummarizationSetBy = User
+
+	column query_hash
+		dataType: string
+		lineageTag: 203dddbb-bbfc-4484-8eb8-ad5626bc5fb2
+		sourceLineageTag: 36e5b54a-7d7e-4293-a14d-3fd0ecbd3704
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: query_hash
+
+		annotation SummarizationSetBy = User
+
+	column command
+		dataType: string
+		lineageTag: ed366f27-f20a-498d-ac6e-000a80f8d696
+		sourceLineageTag: 323ff8e8-a884-4cb1-99d5-00ab323333b7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: command
+
+		annotation SummarizationSetBy = User
+
+	partition exec_requests_history = entity
+		mode: directQuery
+		source
+			entityName: exec_requests_history
+			expressionSource: 'DirectQuery to AS - PBI_Audit 2'
+

@@ -1,0 +1,57 @@
+expression 'DirectQuery to AS - PBI_Audit' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/Power%20Bi%20Admin", "PBI_Audit"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="0b351414-5094-4fa1-90d5-1afbce3219e4", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: e00ca416-0789-4438-88e2-4ce5d9fd54d5
+
+	annotation PBI_IncludeFutureArtifacts = True
+
+expression Parameter1 = #"Sample File" meta [IsParameterQuery=true, BinaryIdentifier=#"Sample File", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 8d6d7c2b-6f0c-40e6-aaa4-e0b2692d1bc9
+	queryGroup: 'Transform File from Query1\Helper Queries'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transform Sample File' =
+		let
+		    Source = Excel.Workbook(Parameter1, null, true),
+		    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true])
+		in
+		    #"Promoted Headers"
+	lineageTag: baa25446-9da1-43ff-8f74-50dabd58e217
+	queryGroup: 'Transform File from Query1'
+
+	annotation PBI_ResultType = Table
+
+expression 'Sample File' =
+		let
+		    Source = SharePoint.Files("https://iweof.sharepoint.com/teams/o365g_insightsandplanningenablers_irssemal-Teaminternal/", [ApiVersion = 15]),
+		    #"Filtered Rows" = Table.SelectRows(Source, each ([Extension] = ".xlsx") and ([Date created] = #datetime(2023, 11, 27, 16, 38, 51))),
+		    Navigation1 = #"Filtered Rows"{0}[Content]
+		in
+		    Navigation1
+	lineageTag: cfebb3a2-22c3-4fd2-b50b-8a988be423ee
+	queryGroup: 'Transform File from Query1\Helper Queries'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transform File' =
+		let
+		    Source = (Parameter1 as binary) => let
+		    Source = Excel.Workbook(Parameter1, null, true),
+		    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true])
+		in
+		    #"Promoted Headers"
+		in
+		    Source
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""Transform Sample File""}" ]
+	lineageTag: e7ef83ac-be2c-4aaf-9e88-90d8c78593ef
+	queryGroup: 'Transform File from Query1\Helper Queries'
+
+	annotation PBI_ResultType = Function
+

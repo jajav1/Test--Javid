@@ -1,0 +1,68 @@
+table User
+	lineageTag: 1203a82d-9e83-40a0-967f-dbe74ce19fcb
+	sourceLineageTag: 948ee865-3b7d-47be-be12-6b52b43d1688
+
+	measure '# Users' = EXTERNALMEASURE("# Users", INTEGER, "DirectQuery to AS - PBI-monitoir-adx-Version1.0")
+		formatString: 0
+		lineageTag: d4abe9f2-eb5f-4cbf-b660-35b1d1a99279
+		sourceLineageTag: b3ba7d92-4543-448f-9833-4a8ed96d27b7
+		dataCategory: Uncategorized
+
+	column UserId
+		dataType: string
+		isNullable: false
+		lineageTag: 10c51576-326b-49c6-8916-5ccdbea94fd4
+		sourceLineageTag: 03302254-00d8-457a-ac7e-b6b497499b08
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: UserId
+
+		annotation SummarizationSetBy = User
+
+	column User
+		dataType: string
+		lineageTag: 14bf2023-564b-4f77-a53e-63bded7f9462
+		sourceLineageTag: 9260059c-f4cc-4c9c-acfa-b121a6a541d6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: User
+
+		annotation SummarizationSetBy = User
+
+	column Tenant
+		dataType: string
+		lineageTag: 06eb3766-38b3-4511-b380-45159646050c
+		sourceLineageTag: 5bfa8764-acf2-446b-a3c7-cb88002c9b19
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Tenant
+
+		annotation SummarizationSetBy = User
+
+	column 'Power BI License'
+		dataType: string
+		lineageTag: 3730b857-4c38-41c7-a1fb-dcf212cf49ff
+		sourceLineageTag: 5644eba5-1599-4b7d-a7a3-97148a01c26c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Power BI License
+
+		annotation SummarizationSetBy = User
+
+	column 'Power BI Activity?'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 6802c608-27c1-43b4-82fb-dd546ffa1705
+		sourceLineageTag: 066d84ef-cf08-4503-bc04-e93c83138c0a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Power BI Activity?
+
+		annotation SummarizationSetBy = User
+
+	partition User = entity
+		mode: directQuery
+		source
+			entityName: User
+			expressionSource: 'DirectQuery to AS - PBI-monitoir-adx-Version1.0'
+

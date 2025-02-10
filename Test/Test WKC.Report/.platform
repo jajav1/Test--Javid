@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Test WKC"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d2303b3c-1ab3-a5bf-47a6-f1e72b5f30e9"
+  }
+}

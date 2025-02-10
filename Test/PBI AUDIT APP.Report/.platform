@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "PBI AUDIT APP"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "749cd38b-c158-bcd2-444b-f9c9feff9a40"
+  }
+}

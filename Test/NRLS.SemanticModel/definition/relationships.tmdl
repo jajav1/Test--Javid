@@ -1,0 +1,9 @@
+relationship 49dff2ca-21ae-4ebf-add7-5eb11d2433b0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Data.Date
+	toColumn: LocalDateTable_9d7500e2-f736-4dbd-a1fa-e955e5e2679b.Date
+
+relationship 02975b8c-280e-4d7f-b834-44be4d4154b2
+	fromColumn: Data.Location
+	toColumn: User.Location
+

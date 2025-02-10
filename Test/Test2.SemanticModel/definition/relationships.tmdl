@@ -1,0 +1,15 @@
+relationship 035db708-174a-4625-ba7d-c8ada17b2e70
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'New PA data'.YEAR_MONTH
+	toColumn: LocalDateTable_74403e9d-0d45-4840-aee9-939b59b09a8e.Date
+
+relationship a2e58d98-cf6a-4b94-b8ed-f4dd9dcdc6e0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'New PA data'.LAST_DATE
+	toColumn: LocalDateTable_823d7601-9671-40f2-b8ec-28baddf992a6.Date
+
+relationship 2f60d2d8-7d2a-483b-994e-150155512016
+	securityFilteringBehavior: none
+	fromColumn: 'New PA data'.company
+	toColumn: WorkspaceMaterialized.CapacityId
+

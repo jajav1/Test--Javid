@@ -1,0 +1,11 @@
+expression 'DirectQuery to AS - tenantsetting' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/Power%20Bi%20Admin", "tenantsetting"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: 54c05f4f-dd00-4e15-b230-cc122f11808d
+
+	annotation PBI_IncludeFutureArtifacts = True
+

@@ -1,0 +1,439 @@
+table Activity
+	lineageTag: 6422ac00-16ab-4078-8c8e-fddfc76cf822
+
+	column Id
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 501daf9a-455d-4d3d-9574-8ca706743409
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecordType
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: dd28a68c-a222-48a1-bf20-9c427ba412bf
+		summarizeBy: sum
+		sourceColumn: RecordType
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreationTime
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: a49f5c9e-c158-489a-a58b-7528f03bc19c
+		summarizeBy: none
+		sourceColumn: CreationTime
+
+		annotation SummarizationSetBy = Automatic
+
+	column Operation
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: e47365d1-6df7-4bc3-be74-5b409767e02b
+		summarizeBy: none
+		sourceColumn: Operation
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrganizationId
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: eb376821-8a17-460f-a2cc-9bdbfe099f9b
+		summarizeBy: none
+		sourceColumn: OrganizationId
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserType
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 5822bf54-3a00-43ff-a35b-8491d2df6672
+		summarizeBy: sum
+		sourceColumn: UserType
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserKey
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 40e6331f-7485-457d-9e8f-831302f6f685
+		summarizeBy: none
+		sourceColumn: UserKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Workload
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 87453fd0-6aa8-41cd-a1f6-96d3eadd916b
+		summarizeBy: none
+		sourceColumn: Workload
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserId
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 7ff27f83-1d24-4b42-8df2-75212237e68a
+		summarizeBy: none
+		sourceColumn: UserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClientIP
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: c9899945-5ca2-482a-a93b-54ab8787b435
+		summarizeBy: none
+		sourceColumn: ClientIP
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserAgent
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 21cf604a-a70f-47eb-9102-221e00ca71c7
+		summarizeBy: none
+		sourceColumn: UserAgent
+
+		annotation SummarizationSetBy = Automatic
+
+	column Activity
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: d9f69ce0-ce45-4dc1-9c7a-13cbda92ad70
+		summarizeBy: none
+		sourceColumn: Activity
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsSuccess
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: fb4f259a-ddaa-4d3a-abd2-641219c314ee
+		summarizeBy: none
+		sourceColumn: IsSuccess
+
+		annotation SummarizationSetBy = Automatic
+
+	column ItemName
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: a6dd4f7b-6d63-4e4f-90e9-f4de899452f2
+		summarizeBy: none
+		sourceColumn: ItemName
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkSpaceName
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 78fb9104-e54c-40c0-84e9-ce448651140b
+		summarizeBy: none
+		sourceColumn: WorkSpaceName
+
+		annotation SummarizationSetBy = Automatic
+
+	column DatasetName
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: ead3d6db-cb76-429f-ade0-454eef5eea47
+		summarizeBy: none
+		sourceColumn: DatasetName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReportName
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 33b22695-f8ea-4366-8eb9-215387c320d9
+		summarizeBy: none
+		sourceColumn: ReportName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CapacityId
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: f7bb5913-f9d4-4fff-bdfe-608a8a8df5cc
+		summarizeBy: none
+		sourceColumn: CapacityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CapacityName
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 3cc51b0a-21d8-4b4d-a003-9c066edc02a9
+		summarizeBy: none
+		sourceColumn: CapacityName
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkspaceId
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: d822bd4a-acd7-4aeb-8870-61d220172f45
+		summarizeBy: none
+		sourceColumn: WorkspaceId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ObjectId
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: f64e0637-058c-4e33-8155-0f0b6603b69b
+		summarizeBy: none
+		sourceColumn: ObjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReportId
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 897942a1-95b7-4f9c-a991-1578eae9202f
+		summarizeBy: none
+		sourceColumn: ReportId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReportType
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: c1432ef7-bc18-42cc-81e2-e791a0eee32b
+		summarizeBy: none
+		sourceColumn: ReportType
+
+		annotation SummarizationSetBy = Automatic
+
+	column DistributionMethod
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 82b83df6-9a74-4f81-8087-d34fa2398218
+		summarizeBy: none
+		sourceColumn: DistributionMethod
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModelsSnapshots
+		dataType: string
+		lineageTag: 2b0c206e-2987-460c-bd44-4236c8e7673f
+		summarizeBy: none
+		sourceColumn: ModelsSnapshots
+
+		annotation SummarizationSetBy = Automatic
+
+	column DatasetId
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: ddd4daa4-f5f3-4dfa-979f-97fb30ad7e42
+		summarizeBy: none
+		sourceColumn: DatasetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataConnectivityMode
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: cca108d0-ed45-4715-97d1-3148e9f845e5
+		summarizeBy: none
+		sourceColumn: DataConnectivityMode
+
+		annotation SummarizationSetBy = Automatic
+
+	column RefreshType
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: cc4e598e-2dee-4ae4-9fb1-a4dff8a58587
+		summarizeBy: none
+		sourceColumn: RefreshType
+
+		annotation SummarizationSetBy = Automatic
+
+	column ConsumptionMethod
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: cb00b9a7-6415-4a1c-a915-a54949c7d0ce
+		summarizeBy: none
+		sourceColumn: ConsumptionMethod
+
+		annotation SummarizationSetBy = Automatic
+
+	column AppName
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 197d39d7-ed09-4d92-87dd-20c9ab8d0e42
+		summarizeBy: none
+		sourceColumn: AppName
+
+		annotation SummarizationSetBy = Automatic
+
+	column AppReportId
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 0c037975-b6c4-4ac0-8e0e-cf7d3524af79
+		summarizeBy: none
+		sourceColumn: AppReportId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmbedTokenId
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 64a89cb0-6576-4f3e-aefa-5d8b76107a33
+		summarizeBy: none
+		sourceColumn: EmbedTokenId
+
+		annotation SummarizationSetBy = Automatic
+
+	column DashboardName
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 52be6cd9-3f9b-470b-8c87-821a72dae9ff
+		summarizeBy: none
+		sourceColumn: DashboardName
+
+		annotation SummarizationSetBy = Automatic
+
+	column DashboardId
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 71973c40-f454-457e-98d6-b03f51326249
+		summarizeBy: none
+		sourceColumn: DashboardId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SharingAction
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 0c8df354-ec90-4312-bcc1-5f3a0ed0573e
+		summarizeBy: none
+		sourceColumn: SharingAction
+
+		annotation SummarizationSetBy = Automatic
+
+	column Datasets
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 132d088f-4bb8-4bf9-a67e-fdbc743f8fe5
+		summarizeBy: none
+		sourceColumn: Datasets
+
+		annotation SummarizationSetBy = Automatic
+
+	column ImportId
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 07ba6533-6126-4464-9781-323595fb373b
+		summarizeBy: none
+		sourceColumn: ImportId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ImportSource
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 73a189a5-894f-46ae-9c47-c723b63e76fe
+		summarizeBy: none
+		sourceColumn: ImportSource
+
+		annotation SummarizationSetBy = Automatic
+
+	column ImportType
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 6b7f9e7f-127b-415b-a3d1-e314715918d7
+		summarizeBy: none
+		sourceColumn: ImportType
+
+		annotation SummarizationSetBy = Automatic
+
+	column ImportDisplayName
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 89baa674-8b33-4056-99b2-549480bc4430
+		summarizeBy: none
+		sourceColumn: ImportDisplayName
+
+		annotation SummarizationSetBy = Automatic
+
+	column RLSIdentities
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 2e019509-54f4-4de8-9e7a-94cff646ce07
+		summarizeBy: none
+		sourceColumn: RLSIdentities
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataflowName
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 848bac85-3b15-4c57-8143-bbb1c94dc1a5
+		summarizeBy: none
+		sourceColumn: DataflowName
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataflowType
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 555c33d0-20b9-4a41-bb83-22515821c5ac
+		summarizeBy: none
+		sourceColumn: DataflowType
+
+		annotation SummarizationSetBy = Automatic
+
+	column GatewayName
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: c290e120-b225-40a7-bf37-8b133b77d6ab
+		summarizeBy: none
+		sourceColumn: GatewayName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Datasources
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 605f595c-78ea-4012-bb1b-fb6165483dd0
+		summarizeBy: none
+		sourceColumn: Datasources
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataflowRefreshScheduleType
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: a199f82a-df47-497f-9448-fbc39dafd8b3
+		summarizeBy: none
+		sourceColumn: DataflowRefreshScheduleType
+
+		annotation SummarizationSetBy = Automatic
+
+	column TileText
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 0d4a4de0-f5a9-4761-8358-737438549778
+		summarizeBy: none
+		sourceColumn: TileText
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Activity = m
+		mode: directQuery
+		source =
+				let
+				    Source = AzureDataExplorer.Contents("powerbimonitoradx.northeurope", "Pbimonitor", null, [MaxRows=null, MaxSize=null, NoTruncate=null, AdditionalSetStatements=null]),
+				    Activity1 = Source{[Name="Activity"]}[Data]
+				in
+				    Activity1
+
+	annotation PBI_ResultType = Table
+

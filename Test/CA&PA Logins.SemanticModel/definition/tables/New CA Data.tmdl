@@ -1,0 +1,124 @@
+table 'New CA Data'
+	lineageTag: e94f43ca-fd9f-476d-bb44-719ae7b110ce
+
+	column 'Source.Name'
+		dataType: string
+		lineageTag: e3c4986b-ed0f-4d3f-80d0-0d456b07daae
+		summarizeBy: none
+		sourceColumn: Source.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 91b94858-f112-435e-87f6-f2fcb976b6be
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Legacy UID'
+		dataType: string
+		lineageTag: fa3b3c97-ab1b-41c8-95a4-0e8f557e9edb
+		summarizeBy: none
+		sourceColumn: Legacy UID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UID
+		dataType: string
+		lineageTag: e2847c43-ebe5-4631-aec9-7635202279de
+		summarizeBy: none
+		sourceColumn: UID
+
+		annotation SummarizationSetBy = Automatic
+
+	column YEAR_MONTH
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 410b16da-c645-49a2-9671-54ed9a5d102f
+		summarizeBy: none
+		sourceColumn: YEAR_MONTH
+
+		variation Variation
+			isDefault
+			relationship: 319dfddc-0b85-412b-8da5-7ca5bf46bede
+			defaultHierarchy: LocalDateTable_c5d1a1bf-bcb2-42ca-b1e1-27e62b22730d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column LAST_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 01f321df-3062-44b3-9a40-0a9bcdeefef1
+		summarizeBy: none
+		sourceColumn: LAST_DATE
+
+		variation Variation
+			isDefault
+			relationship: dbbc1a6f-24ba-4849-87f4-952a6144c799
+			defaultHierarchy: LocalDateTable_0c1dc43c-0c2b-4507-b095-628de859e79d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column mail
+		dataType: string
+		lineageTag: dda3c778-71cc-4d47-9cef-55183edfffbf
+		summarizeBy: none
+		sourceColumn: mail
+
+		annotation SummarizationSetBy = Automatic
+
+	column c
+		dataType: string
+		lineageTag: f2bb9b4c-55d8-4be7-81a5-1e2a07387a54
+		summarizeBy: none
+		sourceColumn: c
+
+		annotation SummarizationSetBy = Automatic
+
+	column company
+		dataType: string
+		lineageTag: 8feddbe1-bcd8-4056-b208-2e9cd22d6dda
+		summarizeBy: none
+		sourceColumn: company
+
+		annotation SummarizationSetBy = Automatic
+
+	column physicalDeliveryOfficeName
+		dataType: string
+		lineageTag: 671916eb-0f2e-4d82-8f0b-70d58b56a892
+		summarizeBy: none
+		sourceColumn: physicalDeliveryOfficeName
+
+		annotation SummarizationSetBy = Automatic
+
+	column department
+		dataType: string
+		lineageTag: 0fda1b77-60b4-43fc-95e0-d2415c9c7e0d
+		summarizeBy: none
+		sourceColumn: department
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'New CA Data' = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://iweof.sharepoint.com/teams/o365g_insightsandplanningenablers_irssemal-Teaminternal", [ApiVersion = 15]),
+				    #"Filtered Rows" = Table.SelectRows(Source, each ([Extension] = ".xlsx") and ([Date created] = #datetime(2023, 11, 27, 16, 30, 4))),
+				    #"Filtered Hidden Files1" = Table.SelectRows(#"Filtered Rows", each [Attributes]?[Hidden]? <> true),
+				    #"Invoke Custom Function1" = Table.AddColumn(#"Filtered Hidden Files1", "Transform File", each #"Transform File"([Content])),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Invoke Custom Function1", {"Name", "Source.Name"}),
+				    #"Removed Other Columns1" = Table.SelectColumns(#"Renamed Columns1", {"Source.Name", "Transform File"}),
+				    #"Expanded Table Column1" = Table.ExpandTableColumn(#"Removed Other Columns1", "Transform File", Table.ColumnNames(#"Transform File"(#"Sample File"))),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Expanded Table Column1",{{"Source.Name", type text}, {"Name", type text}, {"Legacy UID", type text}, {"UID", type text}, {"YEAR_MONTH", type date}, {"LAST_DATE", type date}, {"mail", type any}, {"c", type text}, {"company", type text}, {"physicalDeliveryOfficeName", type text}, {"department", type any}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

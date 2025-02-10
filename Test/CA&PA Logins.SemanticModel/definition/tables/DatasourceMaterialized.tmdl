@@ -1,0 +1,150 @@
+table DatasourceMaterialized
+	lineageTag: 3c301821-85a4-4b08-9243-3e17d0df7316
+	sourceLineageTag: 5dbd3440-431c-406a-b968-a530eb2e1da9
+
+	column Filename
+		dataType: string
+		lineageTag: 9cb45f5a-3e42-4a0f-9ef0-93ae2f2b1d17
+		sourceLineageTag: 85e60e7f-d5c6-42ea-88bf-211e125e2514
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Filename
+
+		annotation SummarizationSetBy = User
+
+	column DataSourceId
+		dataType: string
+		lineageTag: 53f5da4d-a481-4c85-8f86-8d3b2c7722b3
+		sourceLineageTag: a65f180d-de54-4045-a7cf-14586f13076e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DataSourceId
+
+		annotation SummarizationSetBy = User
+
+	column GatewayId
+		dataType: string
+		lineageTag: 3fab1457-876b-4a2c-9374-e6fb47b9a9e3
+		sourceLineageTag: 10323024-d429-4616-8903-270158a1e94e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: GatewayId
+
+		annotation SummarizationSetBy = User
+
+	column DataSourceType
+		dataType: string
+		lineageTag: c283f852-2663-4679-bcc0-991257d89aa7
+		sourceLineageTag: d8515b6a-9eef-4f9a-9f87-5d232fc88b3e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DataSourceType
+
+		annotation SummarizationSetBy = User
+
+	column ConnectionURL
+		dataType: string
+		lineageTag: d47bdd5e-a32a-40e4-a58b-f98d6584314d
+		sourceLineageTag: 1cb4f694-aeaf-403c-aa5f-e46655e417cf
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ConnectionURL
+
+		annotation SummarizationSetBy = User
+
+	column ConnectionSharePointSiteUrl
+		dataType: string
+		lineageTag: b83a35d6-8cc2-4d66-a1df-4f6eaf69516a
+		sourceLineageTag: a59d3337-9939-4e32-a3f8-209531ec0d10
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ConnectionSharePointSiteUrl
+
+		annotation SummarizationSetBy = User
+
+	column ConnectionAccount
+		dataType: string
+		lineageTag: 70be4c05-c30b-4d87-bb70-67e43793227c
+		sourceLineageTag: c5796ec0-4fe8-448b-bbbc-8bcd7c1bf663
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ConnectionAccount
+
+		annotation SummarizationSetBy = User
+
+	column ConnectionDomain
+		dataType: string
+		lineageTag: c1911932-e27c-467c-97c7-68a1695a72fb
+		sourceLineageTag: 7d3d99ab-7df6-4784-bbb7-241f23db5062
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ConnectionDomain
+
+		annotation SummarizationSetBy = User
+
+	column ConnectionServer
+		dataType: string
+		lineageTag: 5bcf4436-08ef-469d-b650-d92c23aa87bd
+		sourceLineageTag: df863ca6-4321-42b3-8a9a-24ac044bc1ba
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ConnectionServer
+
+		annotation SummarizationSetBy = User
+
+	column ConnectionDatabase
+		dataType: string
+		lineageTag: 476d6548-aae8-4e28-a612-eaae5958a931
+		sourceLineageTag: 975f4b59-5a0f-4245-9e92-45069dcff439
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ConnectionDatabase
+
+		annotation SummarizationSetBy = User
+
+	column ConnectionPath
+		dataType: string
+		lineageTag: a5483c23-5045-416d-b537-9d1baa6511c1
+		sourceLineageTag: 4f780c24-7a86-4ec5-b6cf-1c8c597802e1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ConnectionPath
+
+		annotation SummarizationSetBy = User
+
+	column ConnectionConnectionString
+		dataType: string
+		lineageTag: a4f9ffbe-cfaa-4531-965f-f5edcf97d865
+		sourceLineageTag: c9e4d55a-2e36-44d2-888e-7023b6044158
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ConnectionConnectionString
+
+		annotation SummarizationSetBy = User
+
+	column scanCreatedDateTime
+		dataType: string
+		lineageTag: ebe75233-c1cc-4243-bb88-142d32404c33
+		sourceLineageTag: 965dda5e-7776-4c72-b8c6-06d532d18ddb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: scanCreatedDateTime
+
+		annotation SummarizationSetBy = User
+
+	column ConnectionDetails
+		dataType: string
+		lineageTag: 2193e063-cc35-4998-ba22-d8b06b5331c3
+		sourceLineageTag: a930f31c-b184-4526-a0dc-d2d2351879cf
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ConnectionDetails
+
+		annotation SummarizationSetBy = User
+
+	partition DatasourceMaterialized = entity
+		mode: directQuery
+		source
+			entityName: DatasourceMaterialized
+			expressionSource: 'DirectQuery to AS - PBI_Audit 2'
+

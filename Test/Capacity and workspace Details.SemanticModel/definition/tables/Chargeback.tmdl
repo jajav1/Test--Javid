@@ -1,0 +1,106 @@
+table Chargeback
+	lineageTag: 4262ce0e-b73e-47e1-8b44-6a888ad86859
+	sourceLineageTag: e619a789-45ff-48ad-aed0-5f761ea95274
+
+	column 'Capacity Id'
+		dataType: string
+		lineageTag: a8ba97f1-6bac-41ac-bdd1-fb73237ff2cb
+		sourceLineageTag: 000ff665-a0d5-416e-9f86-aef1682d0c98
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Capacity Id
+
+		annotation SummarizationSetBy = User
+
+	column Date
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 3f4c48be-2fa2-4380-9df9-546d726c8ee6
+		sourceLineageTag: 65a9a17c-7c69-4a3e-9457-5237cbf70d73
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = User
+
+	column 'Artifact Id'
+		dataType: string
+		lineageTag: 91da9eb1-cf67-4f66-be19-97905c112125
+		sourceLineageTag: 1f21c630-e088-4e61-a375-31d861a46177
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Artifact Id
+
+		annotation SummarizationSetBy = User
+
+	column 'Operation Name'
+		dataType: string
+		lineageTag: 9d7f3d5c-bb1c-420c-849b-00b4438ff52d
+		sourceLineageTag: dff9240b-c04d-48b1-9a91-e9f234375a40
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Operation Name
+
+		annotation SummarizationSetBy = User
+
+	column 'Sum CPU'
+		dataType: double
+		lineageTag: 5579c12a-e879-44e2-81ff-b03ac2aa992b
+		sourceLineageTag: d4b7c22f-ae6e-4472-b3de-6871b281b3aa
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Sum CPU
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Sum Duration'
+		dataType: double
+		lineageTag: b4455796-0f3b-4f9c-8a8e-e3750bae4c19
+		sourceLineageTag: 0d641dfa-178a-43d0-ba2c-6c18e01a3125
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Sum Duration
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Count Operations'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4ff0306a-50eb-446a-9bea-4b381b32bd63
+		sourceLineageTag: 1f75793c-6e4b-4596-95a2-3e14ff08b8d1
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Count Operations
+
+		annotation SummarizationSetBy = User
+
+	column Identity
+		dataType: string
+		lineageTag: 7c92fed4-d28c-441a-ae80-603322288c83
+		sourceLineageTag: d7635cfc-087e-4140-b628-f98181b09049
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Identity
+
+		annotation SummarizationSetBy = User
+
+	column WorkspaceId
+		dataType: string
+		lineageTag: cb889e42-fd38-4c2b-aa5c-94bbfe6c76e4
+		sourceLineageTag: 737b85fb-c6e0-46f6-990b-215d4368f4fe
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WorkspaceId
+
+		annotation SummarizationSetBy = User
+
+	partition Chargeback = entity
+		mode: directQuery
+		source
+			entityName: Chargeback
+			expressionSource: 'DirectQuery to AS - Premium Chargeback Reporting'
+

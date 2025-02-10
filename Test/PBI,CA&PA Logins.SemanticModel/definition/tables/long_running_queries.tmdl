@@ -1,0 +1,86 @@
+table long_running_queries
+	lineageTag: 86e1cf84-28ce-4c9a-9cf4-df9970988e83
+	sourceLineageTag: b727c170-5833-4547-a18b-fac139a00224
+
+	column median_total_elapsed_time_ms
+		dataType: double
+		lineageTag: 137ae8d9-67e1-4e7e-a2d5-9b6d08ba858d
+		sourceLineageTag: 62d33516-bd2a-465d-ae6c-a4182e8b48ac
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: median_total_elapsed_time_ms
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column last_run_total_elapsed_time_ms
+		dataType: int64
+		formatString: 0
+		lineageTag: f669c422-b78e-4662-a949-ec29726419b6
+		sourceLineageTag: eb9f1267-cd49-4865-9707-c2504bbc04c5
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: last_run_total_elapsed_time_ms
+
+		annotation SummarizationSetBy = User
+
+	column last_run_start_time
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 569e6145-1a45-414e-ad77-f09c074c2218
+		sourceLineageTag: 879ceed2-4cfa-4f08-bc2f-b22e9c6399cf
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: last_run_start_time
+
+		annotation SummarizationSetBy = User
+
+	column last_dist_statement_id
+		dataType: string
+		lineageTag: ad45eeb9-56b4-4e6d-84d4-50cf22dac903
+		sourceLineageTag: 6017196f-04ee-468d-9e38-981b2736e6bf
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: last_dist_statement_id
+
+		annotation SummarizationSetBy = User
+
+	column last_run_session_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 71bc2586-eae4-4f54-a428-90dfd02304e7
+		sourceLineageTag: a6c30735-e994-496a-9a66-409a6e8861b6
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: last_run_session_id
+
+		annotation SummarizationSetBy = User
+
+	column number_of_runs
+		dataType: int64
+		formatString: 0
+		lineageTag: 403a7b8c-d64d-421f-8e06-94854160f914
+		sourceLineageTag: 4f1ca81d-8a7d-404d-a73d-921009f628eb
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: number_of_runs
+
+		annotation SummarizationSetBy = User
+
+	column last_run_command
+		dataType: string
+		lineageTag: a620757e-07ab-45a5-8fc1-b25b8228a614
+		sourceLineageTag: 4ed4f3e6-3460-4845-b446-e5796c68f8d4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: last_run_command
+
+		annotation SummarizationSetBy = User
+
+	partition long_running_queries = entity
+		mode: directQuery
+		source
+			entityName: long_running_queries
+			expressionSource: 'DirectQuery to AS - PBI_Audit 2'
+

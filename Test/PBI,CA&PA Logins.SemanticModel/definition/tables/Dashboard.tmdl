@@ -1,0 +1,71 @@
+table Dashboard
+	lineageTag: 6af2d419-2b16-4d32-a18c-bf28351db48c
+	sourceLineageTag: 3f5f8d31-724d-4b41-87aa-de6ab3a67c4c
+
+	column WorkspaceId
+		dataType: string
+		lineageTag: 2b903bc1-5e12-42f3-a424-40718e570b5e
+		sourceLineageTag: 157043fd-0dd7-46be-ad02-872069acb795
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WorkspaceId
+
+		annotation SummarizationSetBy = User
+
+	column DashboardId
+		dataType: string
+		lineageTag: 03d27a5d-728c-4437-beee-bebb8bac43fb
+		sourceLineageTag: 9ff38b2f-f223-427e-a028-11a2aeec6087
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DashboardId
+
+		annotation SummarizationSetBy = User
+
+	column Dashboard
+		dataType: string
+		lineageTag: 4e6a8a0a-4873-4e0e-9484-cbfef26d5b4a
+		sourceLineageTag: 56a06012-1edc-4ffb-a5d1-49b9e33bd8c5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Dashboard
+
+		annotation SummarizationSetBy = User
+
+	column IsReadOnly
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 41e6e97f-4e5c-420b-a775-c880aa72ffc3
+		sourceLineageTag: 8ab7a13e-f141-4c05-94cf-041f355e6aa0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: IsReadOnly
+
+		annotation SummarizationSetBy = User
+
+	column AppId
+		dataType: string
+		lineageTag: 69ad5ae9-5852-4fe1-a61c-57d8a1119f6e
+		sourceLineageTag: b75c245d-4487-4b8b-bcbd-86e8846cadb9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AppId
+
+		annotation SummarizationSetBy = User
+
+	column ScanDate
+		dataType: string
+		lineageTag: 2448ff89-52b9-4a77-9ee2-344fa7b53525
+		sourceLineageTag: 09f86b92-1a15-4aeb-bf76-97f66d108480
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ScanDate
+
+		annotation SummarizationSetBy = User
+
+	partition Dashboard = entity
+		mode: directQuery
+		source
+			entityName: Dashboard
+			expressionSource: 'DirectQuery to AS - PBI_Audit 2'
+

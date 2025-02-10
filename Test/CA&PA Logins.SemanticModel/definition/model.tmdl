@@ -1,0 +1,77 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup 'Transform File from Query1'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Transform File from Query1\Helper Queries'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Transform File from Query1 (2)'
+
+	annotation PBI_QueryGroupOrder = 2
+
+queryGroup 'Transform File from Query1 (2)\Helper Queries'
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation PBI_QueryOrder = ["DirectQuery to AS - PBI-monitoir-adx-Version1.0","DirectQuery to AS - PBI_Audit","DirectQuery to AS - PBI_Audit 2","New CA Data","Parameter1","Transform Sample File","Sample File","Transform File","New PA Data","Parameter2","Transform Sample File (2)","Sample File (2)","Transform File (2)"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.130.7314.2 (Main)
+
+annotation PBI_ProTooling = ["WebModelingEdit"]
+
+ref table DateTableTemplate_4a33c104-da48-46b2-b128-51d52ed677ea
+ref table Activity
+ref table Calender
+ref table Time
+ref table User
+ref table 'User - Licenses'
+ref table Graph
+ref table App
+ref table Dataflow
+ref table Dashboard
+ref table Dataset
+ref table DataflowDataSource
+ref table DatasetDataSource
+ref table Workspace
+ref table Report
+ref table Datasource
+ref table Permission
+ref table activitymaterialized_test
+ref table ActivityMasked
+ref table exec_requests_history
+ref table long_running_queries
+ref table frequently_run_queries
+ref table fabric_query_completed
+ref table fabric_query_starting
+ref table ActivityMaterialized
+ref table AppMaterialized
+ref table DashboardMaterialized
+ref table DataflowMaterialized
+ref table DataflowDataSourceMaterialized
+ref table DatasetMaterialized
+ref table DatasetDataSourceMaterialized
+ref table DatasourceMaterialized
+ref table GraphMaterialized
+ref table PermissionMaterialized
+ref table ReportMaterialized
+ref table WorkspaceMaterialized
+ref table 'New CA Data'
+ref table LocalDateTable_c5d1a1bf-bcb2-42ca-b1e1-27e62b22730d
+ref table LocalDateTable_0c1dc43c-0c2b-4507-b095-628de859e79d
+ref table 'New PA Data'
+ref table LocalDateTable_9d065172-f8b2-405f-b19b-1ee6311c3bc8
+ref table LocalDateTable_e6052674-72f7-44be-9baa-302585dd9f3e
+
+ref cultureInfo en-US
+

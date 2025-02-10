@@ -1,0 +1,100 @@
+table Permission
+	lineageTag: 202c9f3d-4b1b-442e-a55e-b33f0e69a8a2
+	sourceLineageTag: 23c21a09-65a3-4eaf-8384-2fb30e8b2666
+
+	column WorkspaceId
+		dataType: string
+		lineageTag: 5001bd2a-d6a9-47b2-983f-ee91377f68ed
+		sourceLineageTag: 83cfe224-312f-411b-a5cb-a3370151ef9a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WorkspaceId
+
+		annotation SummarizationSetBy = User
+
+	column AccessRight
+		dataType: string
+		lineageTag: 29b1e0ff-5b69-49b2-8fed-f5b8cc8cbb7d
+		sourceLineageTag: c4ab14f7-3a86-4255-af3b-6711afa5593a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AccessRight
+
+		annotation SummarizationSetBy = User
+
+	column ObjectId
+		dataType: string
+		lineageTag: d7e83c50-4d08-4793-95cc-f42f61fc73e6
+		sourceLineageTag: c4478a93-fa7f-406d-b8e5-9c6fde8f1824
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ObjectId
+
+		annotation SummarizationSetBy = User
+
+	column ObjectType
+		dataType: string
+		lineageTag: 55d497bc-3d2c-4647-bc57-60974d629589
+		sourceLineageTag: f8c7e3d7-8597-40e5-abcb-41369fc9b2f6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ObjectType
+
+		annotation SummarizationSetBy = User
+
+	column ScanDate
+		dataType: string
+		lineageTag: 86020c79-412a-467d-9147-7c80e1ebecc0
+		sourceLineageTag: 02d6cfb4-a640-4a7a-b12a-108a3f513140
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ScanDate
+
+		annotation SummarizationSetBy = User
+
+	column Identity
+		dataType: string
+		lineageTag: d97acfb5-3103-462c-829d-a8d6d4d1b225
+		sourceLineageTag: 012127aa-63ee-48a2-a25c-9e7523e60754
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Identity
+
+		annotation SummarizationSetBy = User
+
+	column IdentityId
+		dataType: string
+		lineageTag: 9027015f-5cd8-4f90-b2fb-191c1b6bd764
+		sourceLineageTag: b724f59d-acda-4e1a-9f7b-cf30959f208f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: IdentityId
+
+		annotation SummarizationSetBy = User
+
+	column IdentityGraphId
+		dataType: string
+		lineageTag: adb2e13a-bbe5-497c-b5fc-7ddeeaa8d300
+		sourceLineageTag: 435e02a5-4572-4b39-bf9e-a1dbffee6785
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: IdentityGraphId
+
+		annotation SummarizationSetBy = User
+
+	column IdentityType
+		dataType: string
+		lineageTag: 7548f259-8a8a-43d7-95c6-d31b5f7b9afe
+		sourceLineageTag: 64e2edd6-01d7-4804-9f50-bff4fbe2f620
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: IdentityType
+
+		annotation SummarizationSetBy = User
+
+	partition Permission = entity
+		mode: directQuery
+		source
+			entityName: Permission
+			expressionSource: 'DirectQuery to AS - PBI_Audit 2'
+

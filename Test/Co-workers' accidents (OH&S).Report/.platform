@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Co-workers' accidents (OH&S)"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1d24acf0-fe07-90ae-4df4-7c02c7879f58"
+  }
+}

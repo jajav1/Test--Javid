@@ -1,0 +1,60 @@
+table AppMaterialized
+	lineageTag: aee0dd8d-775c-464e-9ef5-173afb85c57c
+	sourceLineageTag: ce6f8e2a-2d0c-4524-a694-7f54efe0a681
+
+	column AppId
+		dataType: string
+		lineageTag: 3ce23d5e-fc46-44ae-bf0e-edce75072c0a
+		sourceLineageTag: 53656fb7-1ba4-4fc3-bf41-216333566dc8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AppId
+
+		annotation SummarizationSetBy = User
+
+	column App
+		dataType: string
+		lineageTag: d4a368e9-9370-460a-a895-c30ae3bedc94
+		sourceLineageTag: caae175c-e43a-4cb4-b174-b6c5fa659965
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: App
+
+		annotation SummarizationSetBy = User
+
+	column LastUpdated
+		dataType: string
+		lineageTag: c78b5527-7ba2-4d2e-9d47-53d4ad93b6a0
+		sourceLineageTag: 25137d19-597b-4adf-a33f-1bbe4dad7354
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: LastUpdated
+
+		annotation SummarizationSetBy = User
+
+	column Description
+		dataType: string
+		lineageTag: cc1a6593-939e-4f0d-8a35-35c55d3e4e00
+		sourceLineageTag: e21a10a4-de5a-4b54-888c-e777cb678582
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = User
+
+	column PublishedBy
+		dataType: string
+		lineageTag: 0d92384e-3f3b-467a-bb98-d42a74c7e5c8
+		sourceLineageTag: cad05a4e-b5c5-4373-b1ca-b8be2556fff3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: PublishedBy
+
+		annotation SummarizationSetBy = User
+
+	partition AppMaterialized = entity
+		mode: directQuery
+		source
+			entityName: AppMaterialized
+			expressionSource: 'DirectQuery to AS - PBI_Audit 2'
+

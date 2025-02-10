@@ -1,0 +1,181 @@
+table 'All Measures'
+	lineageTag: 4afe851e-1fb6-4476-ad6e-d26ce3ebe725
+	sourceLineageTag: f38a5a56-9e80-4d58-b155-f9eb768b781e
+
+	measure 'Title Top N workspaces' = EXTERNALMEASURE("Title Top N workspaces", STRING, "DirectQuery to AS - Premium Chargeback Reporting")
+		isHidden
+		displayFolder: Visual Title
+		lineageTag: 817a1680-be99-4db4-91a2-746bb7b28a33
+		sourceLineageTag: 4885a2e5-90be-4da2-b1ad-eb1e00868dd1
+		dataCategory: Uncategorized
+
+	measure 'Title Top N artifacts' = EXTERNALMEASURE("Title Top N artifacts", STRING, "DirectQuery to AS - Premium Chargeback Reporting")
+		isHidden
+		displayFolder: Visual Title
+		lineageTag: acf636e1-4188-4d5b-9b8e-bde551aeb5da
+		sourceLineageTag: f9bd13ce-ca77-4cde-a612-f81e9ed2af4a
+		dataCategory: Uncategorized
+
+	measure 'Title Top N artifact by date' = EXTERNALMEASURE("Title Top N artifact by date", STRING, "DirectQuery to AS - Premium Chargeback Reporting")
+		isHidden
+		displayFolder: Visual Title
+		lineageTag: 07c74a6d-a875-423f-9136-db88d04672e9
+		sourceLineageTag: 6130d831-2aa1-4c9e-9af0-31286c808f35
+		dataCategory: Uncategorized
+
+	measure 'Count of Capacities' = EXTERNALMEASURE("Count of Capacities", INTEGER, "DirectQuery to AS - Premium Chargeback Reporting")
+		formatString: #,0
+		displayFolder: Count
+		lineageTag: d31b85d1-c725-44b2-bc4a-0e1c12c4791b
+		sourceLineageTag: 4c744ce4-20eb-45ed-8885-9846badd7818
+		dataCategory: Uncategorized
+
+	measure 'Count of Artifacts' = EXTERNALMEASURE("Count of Artifacts", INTEGER, "DirectQuery to AS - Premium Chargeback Reporting")
+		formatString: #,0
+		displayFolder: Count
+		lineageTag: d04fa5a5-040c-4590-b4b6-d820662acf18
+		sourceLineageTag: 701a9f50-feec-46a7-abdb-155ce0115ba3
+		dataCategory: Uncategorized
+
+	measure 'Count of Workspaces' = EXTERNALMEASURE("Count of Workspaces", INTEGER, "DirectQuery to AS - Premium Chargeback Reporting")
+		formatString: 0
+		displayFolder: Count
+		lineageTag: 9460cbeb-bef6-432b-a2b5-7cf0310ba014
+		sourceLineageTag: 35d1de6d-e66d-4130-8e33-f39179812cc6
+		dataCategory: Uncategorized
+
+	measure Utilization = EXTERNALMEASURE("Utilization", DOUBLE, "DirectQuery to AS - Premium Chargeback Reporting")
+		formatString: #,0.0
+		displayFolder: Utilization
+		lineageTag: 6da35cf9-5124-4498-853c-fd921c4ef4be
+		sourceLineageTag: f2d5e6ab-009d-446a-a4cf-8bc0555e922b
+		dataCategory: Uncategorized
+
+	measure 'Utilization %' = EXTERNALMEASURE("Utilization %", DOUBLE, "DirectQuery to AS - Premium Chargeback Reporting")
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Utilization
+		lineageTag: 17bb5ebc-bcf5-4a32-bc66-8b9bb19efa22
+		sourceLineageTag: 5e6fa128-2ad5-4a17-90e7-1696a4a7405e
+		dataCategory: Uncategorized
+
+	measure 'Utilization % Bars' = EXTERNALMEASURE("Utilization % Bars", DOUBLE, "DirectQuery to AS - Premium Chargeback Reporting")
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Utilization
+		lineageTag: 799e8636-f3fa-4c6e-913e-80694ff10837
+		sourceLineageTag: e7d3dc09-e870-4710-8a77-be71b825b858
+		dataCategory: Uncategorized
+
+	measure 'Users % Chargeback' = EXTERNALMEASURE("Users % Chargeback", DOUBLE, "DirectQuery to AS - Premium Chargeback Reporting")
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Utilization
+		lineageTag: 4102901d-c75f-4f52-b946-5b1283e04359
+		sourceLineageTag: 84511f09-91cf-4fa6-b0fb-9e3bab815b05
+		dataCategory: Uncategorized
+
+	measure Users = EXTERNALMEASURE("Users", INTEGER, "DirectQuery to AS - Premium Chargeback Reporting")
+		formatString: #,0
+		displayFolder: Utilization
+		lineageTag: a55d4220-5de5-4596-a764-0357693d4071
+		sourceLineageTag: 9b4f9c15-714d-4b6d-9be3-56a3b7660a5f
+		dataCategory: Uncategorized
+
+	measure 'Utilization % Artifact' = EXTERNALMEASURE("Utilization % Artifact", DOUBLE, "DirectQuery to AS - Premium Chargeback Reporting")
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Utilization
+		lineageTag: 89bc77d4-8d43-4030-931b-d548f0c0db74
+		sourceLineageTag: 6c2f9a74-4bbb-4b9c-a1b3-d4028ead3a78
+		dataCategory: Uncategorized
+
+	measure 'Capacity Name from Artifact Id' = EXTERNALMEASURE("Capacity Name from Artifact Id", STRING, "DirectQuery to AS - Premium Chargeback Reporting")
+		isHidden
+		displayFolder: Tooltip
+		lineageTag: 6105fa77-b3d8-45ec-b464-c65ffbdf01ec
+		sourceLineageTag: cbb7990a-eb3f-4b2d-a6fc-6e118b4a7420
+		dataCategory: Uncategorized
+
+	measure 'Workspace Name from Artifact Id' = EXTERNALMEASURE("Workspace Name from Artifact Id", STRING, "DirectQuery to AS - Premium Chargeback Reporting")
+		isHidden
+		displayFolder: Tooltip
+		lineageTag: 809985ed-a1e8-4d4c-a713-c4a2f040ea85
+		sourceLineageTag: e7c253a2-b232-4a4b-acf8-b23cde29b2f7
+		dataCategory: Uncategorized
+
+	measure 'Rank Artifact visual (Drill through page)' = EXTERNALMEASURE("Rank Artifact visual (Drill through page)", INTEGER, "DirectQuery to AS - Premium Chargeback Reporting")
+		formatString: 0
+		isHidden
+		displayFolder: Top N
+		lineageTag: 631ee251-7e5a-4e4a-a6a5-b96beb4551ea
+		sourceLineageTag: 4d90ac52-75fb-474a-811e-ce94cf61088a
+		dataCategory: Uncategorized
+
+	measure 'Rank Workspace visual' = EXTERNALMEASURE("Rank Workspace visual", INTEGER, "DirectQuery to AS - Premium Chargeback Reporting")
+		formatString: 0
+		isHidden
+		displayFolder: Top N
+		lineageTag: 3734f3c2-b6c8-49d1-848a-0f3756794ed1
+		sourceLineageTag: e115b591-9aa9-436c-a4d1-ec872faacd34
+		dataCategory: Uncategorized
+
+	measure 'Rank Artifact visual' = EXTERNALMEASURE("Rank Artifact visual", INTEGER, "DirectQuery to AS - Premium Chargeback Reporting")
+		formatString: 0
+		isHidden
+		displayFolder: Top N
+		lineageTag: 8a52ff37-7703-442d-8b9b-402f8a18aa65
+		sourceLineageTag: b719b492-b297-419b-988a-4eeede79957b
+		dataCategory: Uncategorized
+
+	measure 'Utilization % Chargeback' = EXTERNALMEASURE("Utilization % Chargeback", DOUBLE, "DirectQuery to AS - Premium Chargeback Reporting")
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Utilization
+		lineageTag: eefe2d5a-1766-4b13-832a-9a4159992eb9
+		sourceLineageTag: aa1ff644-c112-447d-bfb2-51711917a4f2
+		dataCategory: Uncategorized
+
+	measure 'Users % Export' = EXTERNALMEASURE("Users % Export", DOUBLE, "DirectQuery to AS - Premium Chargeback Reporting")
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Export
+		lineageTag: 52d3615f-0593-4053-9de1-d64ee1083472
+		sourceLineageTag: dba2c1f1-aed2-4a85-8935-7c15d1506672
+		dataCategory: Uncategorized
+
+	measure 'CPU % Export' = EXTERNALMEASURE("CPU % Export", DOUBLE, "DirectQuery to AS - Premium Chargeback Reporting")
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Export
+		lineageTag: 5be2c162-7c2c-4fba-8ffe-1655ccbc3806
+		sourceLineageTag: 97e42f2e-02f3-4b98-9bd9-9e6a1baa7953
+		dataCategory: Uncategorized
+
+	measure 'Title Top N artifacts details' = EXTERNALMEASURE("Title Top N artifacts details", STRING, "DirectQuery to AS - Premium Chargeback Reporting")
+		isHidden
+		displayFolder: Visual Title
+		lineageTag: 3c116604-d916-487d-a401-b0379eb4d057
+		sourceLineageTag: e777f512-6100-4eba-a092-7d0859bd3d8d
+		dataCategory: Uncategorized
+
+	measure 'Title Top N workspaces details' = EXTERNALMEASURE("Title Top N workspaces details", STRING, "DirectQuery to AS - Premium Chargeback Reporting")
+		isHidden
+		displayFolder: Visual Title
+		lineageTag: 1730834c-5692-4d63-be5e-30ded8c97649
+		sourceLineageTag: b90e21f2-3b41-4f27-b1a6-a0db4668242e
+		dataCategory: Uncategorized
+
+	measure 'Utilization % Artifact details' = EXTERNALMEASURE("Utilization % Artifact details", DOUBLE, "DirectQuery to AS - Premium Chargeback Reporting")
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Utilization
+		lineageTag: 1350b482-af56-4c1f-b26b-f14dd3318256
+		sourceLineageTag: a8f808a2-ba38-4702-ac24-b21201b0d99c
+		dataCategory: Uncategorized
+
+	measure 'Title Top N artifacts details and date' = EXTERNALMEASURE("Title Top N artifacts details and date", STRING, "DirectQuery to AS - Premium Chargeback Reporting")
+		isHidden
+		displayFolder: Visual Title
+		lineageTag: 86ac05fb-2f1e-4352-ad5d-12bb54bf01d6
+		sourceLineageTag: 8cb6d4da-3bc0-4b71-9ff0-7b2069b3d961
+		dataCategory: Uncategorized
+
+	partition 'All Measures' = entity
+		mode: directQuery
+		source
+			entityName: All Measures
+			expressionSource: 'DirectQuery to AS - Premium Chargeback Reporting'
+

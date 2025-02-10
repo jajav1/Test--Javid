@@ -1,0 +1,128 @@
+table Dates
+	lineageTag: a581a8ea-4b3d-4c05-8bc6-96651e1ea296
+	sourceLineageTag: 78406af6-c46b-4d78-9613-d5aeed7ee6a8
+
+	column Date
+		dataType: dateTime
+		isNullable: false
+		formatString: mmmm d\, yyyy
+		lineageTag: 592c4b32-58ca-4ba2-8dde-650bd68e3ad2
+		sourceLineageTag: cc47af87-0571-48c0-88f4-b1b255291ea3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 2f17f2af-5812-4a96-b19c-fc9862ceb999
+			defaultHierarchy: LocalDateTable_ec619fa8-dc52-485f-bf44-ab2c167d991c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column Day
+		dataType: int64
+		formatString: 0
+		lineageTag: 145731b6-2c6b-438d-af98-4bfe7b7ecdce
+		sourceLineageTag: 386a8f3d-ceae-4759-b3dd-cfb1b0bb1fbf
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Day
+
+		annotation SummarizationSetBy = User
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: ebbb197f-96e1-4685-901e-a23cff8efc9a
+		sourceLineageTag: 5afb3ea4-ec50-43d1-a22c-c4f6ba099af0
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = User
+
+	column Quarter
+		dataType: string
+		lineageTag: 0ba991df-bf4c-453b-b902-e0c13c3acfce
+		sourceLineageTag: e2a0ef92-71f8-4c6d-b615-f3cd8533407b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = User
+
+	column 'Week number'
+		dataType: int64
+		formatString: 0
+		lineageTag: bad8330b-4e05-4e9d-8498-0749f51ea28a
+		sourceLineageTag: 38085b51-eeaf-40b5-a5e1-d7820867a106
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Week number
+
+		annotation SummarizationSetBy = User
+
+	column 'First Day of Week'
+		dataType: dateTime
+		formatString: mmm d\, yyyy
+		lineageTag: 8bac9c3f-7100-4e97-ba15-397e2648afb2
+		sourceLineageTag: 66bb329e-2839-4cd2-b60a-e051cf9fc2f6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: First Day of Week
+
+		variation Variation
+			isDefault
+			relationship: 2e54a12d-0bfa-4896-bb70-988a5eeae3d5
+			defaultHierarchy: LocalDateTable_d8ea4541-e16b-41d9-9cdd-2a447aa88623.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column Month
+		dataType: string
+		lineageTag: f871fe90-6e19-4b70-9f92-0af57261e534
+		sourceLineageTag: 7be0e167-89c9-418a-b505-6ab184dd0eb9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = User
+
+	column 'Day Month'
+		dataType: dateTime
+		formatString: mmm d\, yyyy
+		lineageTag: 4b3d2c82-8880-433a-a860-9f2bf9793e9c
+		sourceLineageTag: 6d967a39-7049-4855-a21a-fdaddc373175
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Day Month
+
+		variation Variation
+			isDefault
+			relationship: 030f7578-2a12-405d-9bf8-a8497f5517e0
+			defaultHierarchy: LocalDateTable_f52785b6-0652-42dd-ae05-e85152babea4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column 'Month Year'
+		dataType: dateTime
+		formatString: mmm yyyy
+		lineageTag: 16d8778c-8b37-43ef-bed0-6bb582de0ab5
+		sourceLineageTag: c7457c82-6537-4bcf-be89-51e605a61816
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Month Year
+
+		variation Variation
+			isDefault
+			relationship: 76c8d68a-7826-47ea-84f4-294649afd5da
+			defaultHierarchy: LocalDateTable_8f15f37e-64a7-4e3d-a71a-2768a1983e04.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	partition Dates = entity
+		mode: directQuery
+		source
+			entityName: Dates
+			expressionSource: 'DirectQuery to AS - Premium Chargeback Reporting'
+

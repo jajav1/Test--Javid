@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "CA&PA Logins"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "0a340630-4c43-afb4-4b5d-ecd3f60580cb"
+  }
+}

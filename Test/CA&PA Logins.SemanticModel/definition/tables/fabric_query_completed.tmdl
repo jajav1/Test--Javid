@@ -1,0 +1,148 @@
+table fabric_query_completed
+	lineageTag: a07704a2-8135-4493-aa6b-0e4a94940f4f
+	sourceLineageTag: f2f8d614-c990-4bab-b3aa-c19963d85468
+
+	column TIMESTAMP
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 97df410c-bd36-46a5-ab4d-27b1064057e8
+		sourceLineageTag: 8cc6fa0f-b96b-4dec-8c30-f7ac905da0a6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: TIMESTAMP
+
+		annotation SummarizationSetBy = User
+
+	column distributed_statement_id
+		dataType: string
+		lineageTag: 94df5939-fd54-4330-aaa1-adf4065e2bd5
+		sourceLineageTag: 060f130a-e929-482e-b840-46f5a0810a9f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: distributed_statement_id
+
+		annotation SummarizationSetBy = User
+
+	column database_id
+		dataType: int64
+		formatString: 0
+		lineageTag: a3cba559-819f-40b6-b154-f7c85b7c12fb
+		sourceLineageTag: 8c56bea6-36b7-4d73-9b75-982e01d14c66
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: database_id
+
+		annotation SummarizationSetBy = User
+
+	column database_name
+		dataType: string
+		lineageTag: 6935a425-0cb8-45e8-8963-4d16342810b8
+		sourceLineageTag: 661aeb95-21c8-49af-bf4d-5ca137778b55
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: database_name
+
+		annotation SummarizationSetBy = User
+
+	column execution_duration
+		dataType: int64
+		formatString: 0
+		lineageTag: 428b0541-ce94-4f64-b27e-186d5a0d01e7
+		sourceLineageTag: ba6e2902-9633-464d-b881-e31c9811a9e1
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: execution_duration
+
+		annotation SummarizationSetBy = User
+
+	column row_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 1947ca4a-7efc-434f-af3f-06252cc46290
+		sourceLineageTag: 96895c81-bea6-46de-bc5d-9eadd038e058
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: row_count
+
+		annotation SummarizationSetBy = User
+
+	column error_code
+		dataType: int64
+		formatString: 0
+		lineageTag: e7096e33-dad7-4984-8dfb-6495eebd58d3
+		sourceLineageTag: f42174a0-3708-4747-8bcd-08ac9c6cee4a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: error_code
+
+		annotation SummarizationSetBy = User
+
+	column error_severity
+		dataType: int64
+		formatString: 0
+		lineageTag: f71c72d3-69d2-4063-9627-5dd73a9c3ca3
+		sourceLineageTag: 3015a89c-dee9-4b1a-b902-ce46c51732f8
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: error_severity
+
+		annotation SummarizationSetBy = User
+
+	column query_status
+		dataType: string
+		lineageTag: cf4f5a40-b652-4f10-9c4e-9325fa39a60b
+		sourceLineageTag: aa96c2b8-c03f-43df-8782-2272163f7587
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: query_status
+
+		annotation SummarizationSetBy = User
+
+	column batch_id
+		dataType: string
+		lineageTag: 7b9c3d58-5bc5-4d51-93d9-87c9325e2b13
+		sourceLineageTag: 2e188766-92d7-42e2-8d01-f18a5e561853
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: batch_id
+
+		annotation SummarizationSetBy = User
+
+	column statement_number
+		dataType: int64
+		formatString: 0
+		lineageTag: c5f5e2ba-0c85-4a11-9e87-06fd4c625112
+		sourceLineageTag: 566b1b34-b7ed-4c3d-8739-897e607e76e9
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: statement_number
+
+		annotation SummarizationSetBy = User
+
+	column distributed_request_id
+		dataType: string
+		lineageTag: dc06f806-dd1e-452d-8717-396799c93418
+		sourceLineageTag: 48557e71-7d27-4198-b3f3-2d600785374b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: distributed_request_id
+
+		annotation SummarizationSetBy = User
+
+	column result_cache_hit
+		dataType: int64
+		formatString: 0
+		lineageTag: b59c4e2c-b2e5-4e62-89e4-22984dbc6787
+		sourceLineageTag: 236ebddb-0bb6-4570-b584-6a24f4ad514f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: result_cache_hit
+
+		annotation SummarizationSetBy = User
+
+	partition fabric_query_completed = entity
+		mode: directQuery
+		source
+			entityName: fabric_query_completed
+			expressionSource: 'DirectQuery to AS - PBI_Audit 2'
+

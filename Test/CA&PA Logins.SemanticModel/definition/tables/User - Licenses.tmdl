@@ -1,0 +1,59 @@
+table 'User - Licenses'
+	lineageTag: fb8bc55a-d378-4699-9771-3c46e0d7b6bc
+	sourceLineageTag: 33c44966-6e8c-4961-8495-06e6e11f8765
+
+	measure '# Power BI Licenses' = EXTERNALMEASURE("# Power BI Licenses", INTEGER, "DirectQuery to AS - PBI-monitoir-adx-Version1.0")
+		formatString: 0
+		lineageTag: ab81b653-e698-4b12-a23e-5d721910ed3d
+		sourceLineageTag: 037b0aa1-c7fd-4d64-84f1-3ea2a3724522
+		dataCategory: Uncategorized
+
+	measure '# Licenses' = EXTERNALMEASURE("# Licenses", INTEGER, "DirectQuery to AS - PBI-monitoir-adx-Version1.0")
+		formatString: 0
+		lineageTag: 5b94603e-210a-4c3b-9dfa-395a535ee812
+		sourceLineageTag: 696fd6b4-c04d-420b-bdc5-cad80c7bfe7b
+		dataCategory: Uncategorized
+
+	measure '% Power BI Licenses of Total' = EXTERNALMEASURE("% Power BI Licenses of Total", DOUBLE, "DirectQuery to AS - PBI-monitoir-adx-Version1.0")
+		lineageTag: 836d8bfb-e91d-4159-8216-06b69e323f2a
+		sourceLineageTag: a0b234c5-3882-4c9d-8f24-290c3569995b
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UserId
+		dataType: string
+		lineageTag: dd4df650-0293-4aff-bbef-d0ea0ad62595
+		sourceLineageTag: e8b8a5d9-8c5e-465a-a1c3-287b52efa2d1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: UserId
+
+		annotation SummarizationSetBy = User
+
+	column SKUId
+		dataType: string
+		lineageTag: 2b25d8bd-d07d-40c4-9b76-24aadc4a4583
+		sourceLineageTag: 59bd762d-5c88-44c9-b069-b42ecea15aa4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SKUId
+
+		annotation SummarizationSetBy = User
+
+	column License
+		dataType: string
+		lineageTag: 05d05418-64f9-451f-bb5b-ce3278354005
+		sourceLineageTag: e52a0cb5-d43a-4127-850a-bc2f58ac57af
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: License
+
+		annotation SummarizationSetBy = User
+
+	partition 'User - Licenses' = entity
+		mode: directQuery
+		source
+			entityName: User - Licenses
+			expressionSource: 'DirectQuery to AS - PBI-monitoir-adx-Version1.0'
+

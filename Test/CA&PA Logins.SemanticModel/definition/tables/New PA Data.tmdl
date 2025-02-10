@@ -1,0 +1,124 @@
+table 'New PA Data'
+	lineageTag: 48949e72-41f4-4d44-8e0b-39bde036ffbd
+
+	column 'Source.Name'
+		dataType: string
+		lineageTag: 4e530f7c-48e0-43f7-a907-227b56bba2d7
+		summarizeBy: none
+		sourceColumn: Source.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 1fa7a67e-eb85-46d4-9f97-9dc0af98c5d8
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Legacy UID'
+		dataType: string
+		lineageTag: 50170b9f-e1d8-467c-b752-cf6db9d70ea4
+		summarizeBy: none
+		sourceColumn: Legacy UID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UID
+		dataType: string
+		lineageTag: ea258f2d-fbb2-4995-bafb-8d0cab0a5487
+		summarizeBy: none
+		sourceColumn: UID
+
+		annotation SummarizationSetBy = Automatic
+
+	column YEAR_MONTH
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: cf198a1d-d857-4214-bda4-ac3804c1a389
+		summarizeBy: none
+		sourceColumn: YEAR_MONTH
+
+		variation Variation
+			isDefault
+			relationship: 1e52072f-ed1e-4c30-9f77-010e9da20a1a
+			defaultHierarchy: LocalDateTable_9d065172-f8b2-405f-b19b-1ee6311c3bc8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column LAST_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e024f19b-e5ad-45be-b008-44f9da708229
+		summarizeBy: none
+		sourceColumn: LAST_DATE
+
+		variation Variation
+			isDefault
+			relationship: 2a735f17-6f48-41c7-a036-8de97ea529e6
+			defaultHierarchy: LocalDateTable_e6052674-72f7-44be-9baa-302585dd9f3e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column mail
+		dataType: string
+		lineageTag: 13253c08-92af-4149-ab41-f730fd3df149
+		summarizeBy: none
+		sourceColumn: mail
+
+		annotation SummarizationSetBy = Automatic
+
+	column c
+		dataType: string
+		lineageTag: 5833684d-9bdb-4654-bce2-8acbb0a4bbd1
+		summarizeBy: none
+		sourceColumn: c
+
+		annotation SummarizationSetBy = Automatic
+
+	column company
+		dataType: string
+		lineageTag: 846b8023-103f-4bfe-b466-6103534c2e15
+		summarizeBy: none
+		sourceColumn: company
+
+		annotation SummarizationSetBy = Automatic
+
+	column physicalDeliveryOfficeName
+		dataType: string
+		lineageTag: f56f3860-37bb-4fc2-9d6c-a09f35767484
+		summarizeBy: none
+		sourceColumn: physicalDeliveryOfficeName
+
+		annotation SummarizationSetBy = Automatic
+
+	column department
+		dataType: string
+		lineageTag: 4bcfd0f6-c09a-470e-95fe-dbdeac75e876
+		summarizeBy: none
+		sourceColumn: department
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'New PA Data' = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://iweof.sharepoint.com/teams/o365g_insightsandplanningenablers_irssemal-Teaminternal/", [ApiVersion = 15]),
+				    #"Filtered Rows" = Table.SelectRows(Source, each ([Extension] = ".xlsx") and ([Date created] = #datetime(2023, 11, 27, 16, 38, 51))),
+				    #"Filtered Hidden Files1" = Table.SelectRows(#"Filtered Rows", each [Attributes]?[Hidden]? <> true),
+				    #"Invoke Custom Function1" = Table.AddColumn(#"Filtered Hidden Files1", "Transform File (2)", each #"Transform File (2)"([Content])),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Invoke Custom Function1", {"Name", "Source.Name"}),
+				    #"Removed Other Columns1" = Table.SelectColumns(#"Renamed Columns1", {"Source.Name", "Transform File (2)"}),
+				    #"Expanded Table Column1" = Table.ExpandTableColumn(#"Removed Other Columns1", "Transform File (2)", Table.ColumnNames(#"Transform File (2)"(#"Sample File (2)"))),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Expanded Table Column1",{{"Source.Name", type text}, {"Name", type text}, {"Legacy UID", type text}, {"UID", type text}, {"YEAR_MONTH", type date}, {"LAST_DATE", type date}, {"mail", type any}, {"c", type text}, {"company", type text}, {"physicalDeliveryOfficeName", type text}, {"department", type any}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

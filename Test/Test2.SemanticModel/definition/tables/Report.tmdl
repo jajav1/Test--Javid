@@ -1,0 +1,142 @@
+table Report
+	lineageTag: 6a92eb4e-51aa-4349-9e8c-c877e85187d1
+	sourceLineageTag: 26e7f64a-a959-443b-84fd-3c5fef369c34
+
+	column WorkspaceId
+		dataType: string
+		lineageTag: 8254a831-6960-49bc-b636-bc65be0526ff
+		sourceLineageTag: 1452f3f3-36e1-45aa-8771-c24bc46a83db
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WorkspaceId
+
+		annotation SummarizationSetBy = User
+
+	column ReportId
+		dataType: string
+		lineageTag: d2c0dd25-e918-4aeb-9486-489352541dc7
+		sourceLineageTag: d36e7f81-f6c4-4729-94b5-2849b2040765
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ReportId
+
+		annotation SummarizationSetBy = User
+
+	column Report
+		dataType: string
+		lineageTag: d0037335-4641-458b-ae97-8e1a26393e4e
+		sourceLineageTag: 56478cc0-de69-45f2-8094-2b76e049870a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Report
+
+		annotation SummarizationSetBy = User
+
+	column DatasetId
+		dataType: string
+		lineageTag: d8c8d379-d491-4c71-b898-43f9211f6329
+		sourceLineageTag: 4d4060a3-e97a-4847-b7ab-aa9c2e6b7ca8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DatasetId
+
+		annotation SummarizationSetBy = User
+
+	column CreatedOn
+		dataType: string
+		lineageTag: a477bc83-e2e4-4813-8b12-d40f317b809d
+		sourceLineageTag: c616882f-f2f5-49aa-81e5-756709ecb431
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CreatedOn
+
+		annotation SummarizationSetBy = User
+
+	column ModifiedOn
+		dataType: string
+		lineageTag: 804e242f-1d4c-4192-ab0a-9be14039a0b5
+		sourceLineageTag: 3baebdf1-b51d-4ea0-9cbb-9702cd17c584
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ModifiedOn
+
+		annotation SummarizationSetBy = User
+
+	column ModifiedBy
+		dataType: string
+		lineageTag: e20d48ac-db88-4177-8038-33bf7abc3a48
+		sourceLineageTag: 71f8177c-f362-4c60-b5e6-86c091a55bf5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ModifiedBy
+
+		annotation SummarizationSetBy = User
+
+	column AppId
+		dataType: string
+		lineageTag: 0bac4b81-73d9-469c-976c-1c3c6eb66bc0
+		sourceLineageTag: 378e61ab-cf7b-403f-9e9d-a7e9a3597393
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AppId
+
+		annotation SummarizationSetBy = User
+
+	column Endorsement
+		dataType: string
+		lineageTag: b849670d-667d-4bf5-bffc-f92e1b025881
+		sourceLineageTag: fdd1a155-0c6d-4051-8a34-a5c98fad6977
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Endorsement
+
+		annotation SummarizationSetBy = User
+
+	column CertifiedBy
+		dataType: string
+		lineageTag: 39e82222-3cfc-47a5-b17f-cd15258cfca9
+		sourceLineageTag: c42cf0c1-10b8-4587-9b67-c052de304351
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CertifiedBy
+
+		annotation SummarizationSetBy = User
+
+	column Type
+		dataType: string
+		lineageTag: 7bdeca51-436b-42f8-94b2-0d6bc9422dca
+		sourceLineageTag: d263ddf4-9c94-4396-84a7-0fff54204cb8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = User
+
+	column SensitivityLabel
+		dataType: string
+		lineageTag: d0075dc7-95c9-4063-968a-cd4a081a0ccf
+		sourceLineageTag: 8dcacfac-524f-42be-9a8a-e4aefb363c59
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SensitivityLabel
+
+		annotation SummarizationSetBy = User
+
+	column scanCreatedDateTime
+		dataType: string
+		lineageTag: f2fd927f-b4d3-4eef-89f1-8ecf094e0043
+		sourceLineageTag: bd4bfaa5-96bd-47a5-9461-95823eedd88a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: scanCreatedDateTime
+
+		annotation SummarizationSetBy = User
+
+	partition Report = entity
+		mode: directQuery
+		source
+			entityName: Report
+			expressionSource: 'DirectQuery to AS - PBI_Audit'
+
+	annotation PBI_ResultType = Table
+

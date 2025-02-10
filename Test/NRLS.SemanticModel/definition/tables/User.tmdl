@@ -1,0 +1,35 @@
+table User
+	lineageTag: 0b489cd3-d61a-4b7c-a238-3b9b5f2272ea
+
+	measure Username = USERPRINCIPALNAME()
+		lineageTag: e7458fc8-4dc8-4d91-b133-e3bc26f869fd
+
+	column Name
+		dataType: string
+		lineageTag: 32f0cb35-c450-4c7c-a5d5-5297fa58741f
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location
+		dataType: string
+		lineageTag: a02fd9a1-a87c-4f93-b6d4-f94227386ac9
+		summarizeBy: none
+		sourceColumn: Location
+
+		annotation SummarizationSetBy = Automatic
+
+	partition User = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\JAJAV1\OneDrive - IKEA\Desktop\DRLS.xlsx"), null, true),
+				    User_Sheet = Source{[Item="User",Kind="Sheet"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(User_Sheet,{{"Column1", type text}, {"Column2", type text}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Column1", "Name"}, {"Column2", "Location"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,7 @@
+role user
+	modelPermission: read
+
+	tablePermission Book1 = [name]=USERPRINCIPALNAME()
+
+	annotation PBI_Id = eaefb4f8fbd64270befef4aa32d21cba
+
